@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAiWorkflow();
   initWorkTabs();
   initLightbox();
+  initStackingCards();
 
   // Initialize metrics if they exist on the page
   if (document.querySelectorAll('.metric-card').length > 0) {
@@ -622,4 +623,50 @@ function initLightbox() {
     if (e.key === 'ArrowLeft')  show(current - 1);
     if (e.key === 'ArrowRight') show(current + 1);
   });
+}
+/* ==========================================================================
+   STACKING CARDS — scroll-driven scale + dim effect
+   ========================================================================== */
+function initStackingCards() {
+  const cards = document.querySelectorAll('.work-card');
+  if (!cards.length) return;
+
+  function onScroll() {
+    const viewportH = window.innerHeight;
+
+    cards.forEach((card, i) => {
+      const rect = card.getBoundingClientRect();
+      const cardTop    = rect.top;
+      const stickyOffset = 120 + i * 8;
+      const distancePast = stickyOffset - cardTop;
+
+      // Alternate direction per card
+      const direction = i % 2 === 0 ? -1 : 1;
+
+      // --- Scroll-driven tilt for ALL cards in viewport ---
+      // Map card's vertical center position to a tilt: top of screen = tilted, centre = straight
+      const cardCenter  = cardTop + rect.height / 2;
+      const normalized  = (cardCenter / viewportH - 0.5) * 2; // -1 (top) to +1 (bottom)
+      const scrollTilt  = normalized * 6 * direction; // ±6° from scroll position
+
+      if (distancePast > 0) {
+        // Stacked card: scale + stronger rotation
+        const scale   = Math.max(0.94, 1 - distancePast * 0.0004);
+        const opacity = Math.max(0.65, 1 - distancePast * 0.0012);
+        const stackRotate = Math.min(9, distancePast * 0.018) * direction; // max ±9°
+        const totalRotate = (stackRotate + scrollTilt).toFixed(3);
+        card.style.transform       = `scale(${scale.toFixed(4)}) rotate(${totalRotate}deg)`;
+        card.style.transformOrigin = 'top center';
+        card.style.opacity         = opacity.toFixed(4);
+      } else {
+        // Normal card: only scroll tilt
+        card.style.transform       = `rotate(${scrollTilt.toFixed(3)}deg)`;
+        card.style.transformOrigin = 'center center';
+        card.style.opacity         = '1';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // run once on init
 }

@@ -518,7 +518,7 @@ body {
    HERO SECTION — Apple editorial style
 ══════════════════════════════════════════ */
 .hero-section {
-  padding: 170px 0 100px;
+  padding: 150px 0 60px;
 }
 .hero-grid {
   display: grid;
@@ -675,7 +675,7 @@ body {
   width: 100%;
   height: 1px;
   background: var(--divider);
-  margin: 72px 0;
+  margin: 40px 0;
 }
 .divider {
   width: 100%;
@@ -699,12 +699,21 @@ body {
   align-items: center;
   cursor: pointer;
   transition: all 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: sticky;
+  top: 120px;
 }
 .case-card:hover {
   border-color: var(--card-hover-border);
   transform: translateY(-6px);
-  
 }
+
+/* ── Stacking offsets: each card peeks slightly lower ── */
+.work-card:nth-child(1)  { top: 120px; }
+.work-card:nth-child(2)  { top: 128px; }
+.work-card:nth-child(3)  { top: 136px; }
+.work-card:nth-child(4)  { top: 144px; }
+.work-card:nth-child(5)  { top: 152px; }
+.work-card:nth-child(6)  { top: 160px; }
 .case-meta {
   display: flex;
   gap: 8px;
@@ -1530,7 +1539,7 @@ body {
 .footer {
   border-top: 1px solid var(--divider);
   padding: 52px 0;
-  margin-top: 100px;
+  margin-top: 60px;
   background: var(--bg-subtle);
 }
 .footer-inner {
@@ -1555,7 +1564,7 @@ body {
   position: relative;
   background: #0A0A0F;
   padding: 80px 0 40px;
-  margin-top: 100px;
+  margin-top: 60px;
   overflow: hidden;
 }
 
@@ -1870,6 +1879,117 @@ body {
   font-size: 18px;
   line-height: 1.6;
   color: var(--text-secondary);
+}
+
+/* ══════════════════════════════════════════
+   VERTICAL SOCIAL TOOLBAR
+══════════════════════════════════════════ */
+.social-toolbar {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(10, 10, 15, 0.08);
+  padding: 16px 12px;
+  border-radius: 100px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 12px 32px rgba(10, 10, 15, 0.06);
+}
+.social-toolbar a {
+  color: var(--text-secondary);
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.social-toolbar a svg {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.25s ease;
+}
+.social-toolbar a:hover {
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.1);
+  transform: translateY(-2px);
+}
+.social-toolbar a:hover svg {
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .social-toolbar {
+    display: none;
+  }
+}
+
+/* ══════════════════════════════════════════
+   SKILLS MARQUEE
+══════════════════════════════════════════ */
+.skills-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 60px;
+  padding: 30px 0;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+.skills-marquee {
+  display: flex;
+  width: max-content;
+}
+.skills-track {
+  display: flex;
+  gap: 40px;
+  animation: marquee 30s linear infinite;
+  padding-right: 40px; /* match gap */
+}
+.skills-track:hover {
+  animation-play-state: paused;
+}
+.skill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 12px 24px;
+  border-radius: 100px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(10, 10, 15, 0.03);
+  transition: all 0.25s ease;
+}
+.skill-item:hover {
+  border-color: rgba(var(--accent-rgb), 0.3);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.08);
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .skills-marquee-container {
+    margin-top: 40px;
+  }
+  .skill-item {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }
 
 /* ══════════════════════════════════════════
