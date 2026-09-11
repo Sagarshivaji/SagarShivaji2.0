@@ -6,8 +6,8 @@
     <title>Zoho Inventory · UX Reverse Engineering + AI Exploration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/iconfamily=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="../style.css" />
     <style>
         :root {
@@ -179,7 +179,7 @@
         <a href="../work.html">Work</a>
         <a href="../about.html">About</a>
         <a href="../research.html">Research</a>
-        <a href="https://drive.google.com/file/d/1BDUu_gcDBcaZTLKatYkmeckvLk0Y8uly/view?usp=sharing" target="_blank">Resume</a>
+        <a href="https://drive.google.com/file/d/1BDUu_gcDBcaZTLKatYkmeckvLk0Y8uly/viewusp=sharing" target="_blank">Resume</a>
         <div class="mobile-theme-section">
             <span class="small font-medium">Theme</span>
             <div class="theme-toggle" id="themeToggleMobile" title="Toggle theme">
@@ -229,7 +229,7 @@
                 <a href="../work.html" class="active">Work</a>
                 <a href="../about.html">About</a>
                 <a href="../research.html">Research</a>
-                <a href="https://drive.google.com/file/d/1BDUu_gcDBcaZTLKatYkmeckvLk0Y8uly/view?usp=sharing" target="_blank">Resume</a>
+                <a href="https://drive.google.com/file/d/1BDUu_gcDBcaZTLKatYkmeckvLk0Y8uly/viewusp=sharing" target="_blank">Resume</a>
                 <div class="nav-divider"></div>
                 <div class="theme-toggle" id="themeToggle" title="Toggle theme">
                     <button class="theme-toggle-btn" data-theme="light" aria-label="Light mode">☀</button>
@@ -333,22 +333,22 @@
                                         Inventory management looks simple from the outside. A product comes in, sits in a warehouse, gets ordered, and eventually reaches a customer. But behind that journey are dozens of interconnected decisions.
                                     </p>
                                     <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px;">
-                                        <span class="tag">Is the product available?</span>
-                                        <span class="tag">Which warehouse has it?</span>
-                                        <span class="tag">Has stock been committed?</span>
-                                        <span class="tag">When to reorder?</span>
-                                        <span class="tag">Has it shipped?</span>
-                                        <span class="tag">Will it arrive on time?</span>
-                                        <span class="tag">What's selling faster?</span>
-                                        <span class="tag">What's overstocked?</span>
+                                        <span class="tag">Is the product available</span>
+                                        <span class="tag">Which warehouse has it</span>
+                                        <span class="tag">Has stock been committed</span>
+                                        <span class="tag">When to reorder</span>
+                                        <span class="tag">Has it shipped</span>
+                                        <span class="tag">Will it arrive on time</span>
+                                        <span class="tag">What's selling faster</span>
+                                        <span class="tag">What's overstocked</span>
                                     </div>
                                     <p class="body-base text-secondary">
-                                        I reverse-engineered Zoho Inventory to understand how a B2B inventory platform organizes these interconnected workflows. Then I explored an additional question: <strong style="color:var(--text-primary);">What if an inventory system could not only tell businesses what is happening, but also predict what is likely to happen next?</strong>
+                                        I reverse-engineered Zoho Inventory to understand how a B2B inventory platform organizes these interconnected workflows. Then I explored an additional question: <strong style="color:var(--text-primary);">What if an inventory system could not only tell businesses what is happening, but also predict what is likely to happen next</strong>
                                     </p>
                                 </div>
                             </div>
                             <div class="project-hero-image-wrapper" style="margin-top:24px;">
-                                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" alt="Large warehouse with organized inventory shelves" class="project-hero-img" loading="lazy" />
+                                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310dq=80&w=2070&auto=format&fit=crop" alt="Large warehouse with organized inventory shelves" class="project-hero-img" loading="lazy" />
                                 <span style="display:block; padding:10px 14px; font-weight:500; font-size:0.85rem; color:var(--text-tertiary);">Behind the interface: dozens of interconnected inventory decisions</span>
                             </div>
                         </div>
@@ -384,19 +384,19 @@
 
                         <!-- ===== PROBLEM ===== -->
                         <div id="problem" class="project-content-section reveal">
-                            <h2 class="heading-2 font-semibold" style="margin-bottom:16px;">What Problem Does Inventory Software Solve?</h2>
+                            <h2 class="heading-2 font-semibold" style="margin-bottom:16px;">What Problem Does Inventory Software Solve</h2>
                             <p class="body-base text-secondary" style="margin-bottom:16px;">
                                 Imagine a growing business managing operations through spreadsheets, emails, phone calls, and messaging apps. A customer places an order. The team now needs to answer:
                             </p>
                             <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:20px;">
-                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Do we have the item?</p></div></div>
-                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Which warehouse has it?</p></div></div>
-                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Has that stock already been committed?</p></div></div>
-                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Who needs to pack it?</p></div></div>
-                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Has the shipment left?</p></div></div>
-                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Will it arrive on time?</p></div></div>
-                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Was the invoice generated?</p></div></div>
-                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Has the customer paid?</p></div></div>
+                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Do we have the item</p></div></div>
+                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Which warehouse has it</p></div></div>
+                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Has that stock already been committed</p></div></div>
+                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Who needs to pack it</p></div></div>
+                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Has the shipment left</p></div></div>
+                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Will it arrive on time</p></div></div>
+                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Was the invoice generated</p></div></div>
+                                <div class="numbered-step"><span class="num">↓</span><div class="step-content"><p>Has the customer paid</p></div></div>
                             </div>
                             <p class="body-base text-secondary">
                                 This may be manageable with a few orders. At hundreds or thousands of orders, it becomes an <strong style="color:var(--text-primary);">operational problem</strong>. Information becomes fragmented, stock counts become unreliable, and teams spend time asking each other for status updates. An inventory management platform creates a <strong style="color:var(--text-primary);">single source of operational truth</strong>.
@@ -462,37 +462,37 @@
 
                         <!-- ===== USERS ===== -->
                         <div id="users" class="project-content-section reveal">
-                            <h2 class="heading-2 font-semibold" style="margin-bottom:16px;">Who Uses the System?</h2>
+                            <h2 class="heading-2 font-semibold" style="margin-bottom:16px;">Who Uses the System</h2>
                             <p class="body-base text-secondary" style="margin-bottom:20px;">Instead of traditional personas, I analyzed users based on their <strong style="color:var(--text-primary);">operational responsibilities</strong>.</p>
                             <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:20px;">
                                 <div class="ai-card" style="margin-bottom:0;">
                                     <span style="font-weight:700; color:var(--accent); font-size:0.8rem;">BUSINESS OWNER</span>
-                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"Is my business operating normally?"</p>
+                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"Is my business operating normally"</p>
                                     <p class="small text-secondary" style="margin:0;">Needs: Sales performance, inventory value, order status, low-stock alerts, outstanding payments.</p>
                                 </div>
                                 <div class="ai-card" style="margin-bottom:0;">
                                     <span style="font-weight:700; color:var(--accent); font-size:0.8rem;">INVENTORY MANAGER</span>
-                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"Do we have the right products in the right quantities?"</p>
+                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"Do we have the right products in the right quantities"</p>
                                     <p class="small text-secondary" style="margin:0;">Needs: Available inventory, committed stock, reorder levels, stock transfers.</p>
                                 </div>
                                 <div class="ai-card" style="margin-bottom:0;">
                                     <span style="font-weight:700; color:var(--accent); font-size:0.8rem;">SALES EXECUTIVE</span>
-                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"Can I confidently fulfill this customer's order?"</p>
+                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"Can I confidently fulfill this customer's order"</p>
                                     <p class="small text-secondary" style="margin:0;">Needs: Customer info, product availability, pricing, shipment status.</p>
                                 </div>
                                 <div class="ai-card" style="margin-bottom:0;">
                                     <span style="font-weight:700; color:var(--accent); font-size:0.8rem;">WAREHOUSE STAFF</span>
-                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"What needs to leave or enter the warehouse today?"</p>
+                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"What needs to leave or enter the warehouse today"</p>
                                     <p class="small text-secondary" style="margin:0;">Needs: Picking lists, product locations, shipping details, incoming inventory.</p>
                                 </div>
                                 <div class="ai-card" style="margin-bottom:0;">
                                     <span style="font-weight:700; color:var(--accent); font-size:0.8rem;">PURCHASE MANAGER</span>
-                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"What should we purchase, from whom and when?"</p>
+                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"What should we purchase, from whom and when"</p>
                                     <p class="small text-secondary" style="margin:0;">Needs: Low-stock products, vendor info, supplier lead times, purchase costs.</p>
                                 </div>
                                 <div class="ai-card" style="margin-bottom:0;">
                                     <span style="font-weight:700; color:var(--accent); font-size:0.8rem;">ACCOUNTANT</span>
-                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"Has every transaction been financially accounted for?"</p>
+                                    <p style="font-weight:600; font-size:0.95rem; margin:4px 0;">"Has every transaction been financially accounted for"</p>
                                     <p class="small text-secondary" style="margin:0;">Needs: Invoices, bills, payments, taxes, credit notes.</p>
                                 </div>
                             </div>
@@ -593,7 +593,7 @@
                                 <span style="font-weight:600; color:var(--text-primary);">Delivery</span><span style="color:var(--text-tertiary);">↓</span>
                                 <span style="font-weight:600; color:var(--text-primary);">Invoice → Payment</span>
                             </div>
-                            <p class="body-base text-secondary">Every stage answers a different operational question: <strong style="color:var(--text-primary);">Confirmed?</strong> · <strong style="color:var(--text-primary);">Allocated?</strong> · <strong style="color:var(--text-primary);">Packed?</strong> · <strong style="color:var(--text-primary);">Shipped?</strong> · <strong style="color:var(--text-primary);">Delivered?</strong> · <strong style="color:var(--text-primary);">Paid?</strong></p>
+                            <p class="body-base text-secondary">Every stage answers a different operational question: <strong style="color:var(--text-primary);">Confirmed</strong> · <strong style="color:var(--text-primary);">Allocated</strong> · <strong style="color:var(--text-primary);">Packed</strong> · <strong style="color:var(--text-primary);">Shipped</strong> · <strong style="color:var(--text-primary);">Delivered</strong> · <strong style="color:var(--text-primary);">Paid</strong></p>
                         </div>
 
                         <!-- ===== ORDER STATUS ===== -->
@@ -675,7 +675,7 @@
                             </div>
                             <p class="body-base text-secondary">A shortage in Hyderabad doesn't necessarily mean the company needs to purchase more. The business might instead <strong style="color:var(--text-primary);">transfer 100 units from Mumbai → Hyderabad</strong>. The system should help users optimize inventory across the entire network, not treat every warehouse independently.</p>
                             <div class="project-hero-image-wrapper" style="margin-top:24px;">
-                                <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?q=80&w=2070&auto=format&fit=crop" alt="Multiple warehouse distribution network" class="project-hero-img" loading="lazy" />
+                                <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088q=80&w=2070&auto=format&fit=crop" alt="Multiple warehouse distribution network" class="project-hero-img" loading="lazy" />
                                 <span style="display:block; padding:10px 14px; font-weight:500; font-size:0.85rem; color:var(--text-tertiary);">Multi-warehouse coordination: optimize across the network</span>
                             </div>
                         </div>
@@ -701,7 +701,7 @@
                         <!-- ===== DASHBOARD ===== -->
                         <div id="dashboard" class="project-content-section reveal">
                             <h2 class="heading-2 font-semibold" style="margin-bottom:16px;">Dashboard Analysis</h2>
-                            <p class="body-base text-secondary" style="margin-bottom:16px;">A useful operational dashboard should answer one question first: <strong style="color:var(--text-primary);">"What needs my attention right now?"</strong></p>
+                            <p class="body-base text-secondary" style="margin-bottom:16px;">A useful operational dashboard should answer one question first: <strong style="color:var(--text-primary);">"What needs my attention right now"</strong></p>
                             <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:24px; margin-bottom:16px;">
                                 <p style="font-weight:700; color:var(--accent); margin:0 0 12px 0;">TODAY</p>
                                 <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:12px; margin-bottom:16px;">
@@ -720,7 +720,7 @@
                         <div id="observation" class="project-content-section reveal">
                             <h2 class="heading-2 font-semibold" style="margin-bottom:16px;">Key Observation</h2>
                             <div class="insight-quote" style="margin-bottom:16px;">
-                                <p>"Most inventory interfaces are good at answering: What is happening? But operational teams often need to answer: What is likely to happen next?"</p>
+                                <p>"Most inventory interfaces are good at answering: What is happening But operational teams often need to answer: What is likely to happen next"</p>
                             </div>
                             <p class="body-base text-secondary">After mapping the workflows, I noticed a broader limitation common to traditional inventory systems. They're reactive they tell you stock is low, an order is delayed, or inventory is overstocked. But they don't help you <strong style="color:var(--text-primary);">anticipate</strong> these situations before they occur.</p>
                         </div>
@@ -729,16 +729,16 @@
                         <div id="opportunity" class="project-content-section reveal">
                             <h2 class="heading-2 font-semibold" style="margin-bottom:16px;">Design Opportunity</h2>
                             <div class="insight-quote" style="margin-bottom:20px;">
-                                <p>"How might we transform inventory management from reactive monitoring into proactive decision-making?"</p>
+                                <p>"How might we transform inventory management from reactive monitoring into proactive decision-making"</p>
                             </div>
                             <p style="font-size:1.3rem; font-weight:700; color:var(--accent); text-align:center; margin-bottom:20px;">AI Inventory Intelligence</p>
                             <p class="body-base text-secondary" style="margin-bottom:16px; text-align:center;">A predictive intelligence layer that uses historical and current operational data to identify risks and recommend actions before problems occur.</p>
                             <div style="display:flex; flex-direction:column; align-items:center; gap:8px; padding:20px; background:var(--bg-surface); border-radius:16px; border:1px solid var(--card-border);">
-                                <span style="font-weight:700; color:#ef4444;">REACTIVE What happened?</span>
+                                <span style="font-weight:700; color:#ef4444;">REACTIVE What happened</span>
                                 <span style="color:var(--text-tertiary); font-size:1.2rem;">↓</span>
-                                <span style="font-weight:700; color:#f59e0b;">PREDICTIVE What will probably happen?</span>
+                                <span style="font-weight:700; color:#f59e0b;">PREDICTIVE What will probably happen</span>
                                 <span style="color:var(--text-tertiary); font-size:1.2rem;">↓</span>
-                                <span style="font-weight:700; color:#10b981;">PROACTIVE What should we do about it?</span>
+                                <span style="font-weight:700; color:#10b981;">PROACTIVE What should we do about it</span>
                             </div>
                         </div>
 
@@ -769,7 +769,7 @@
                                 <h3 style="font-weight:600; font-size:1.1rem; margin:4px 0;">Demand Forecasting</h3>
                                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:8px;">
                                     <div><span style="font-weight:700;">Nike Running Shoes</span><br><span class="small text-secondary">Current Stock: 420 units<br>Predicted 30-day demand: 510 units</span><br><span style="color:#ef4444; font-weight:600;">↑ 37% High demand expected</span></div>
-                                    <div><span class="small text-secondary"><strong style="color:var(--text-primary);">Why?</strong><br>• Sales increased 18% last 4 weeks<br>• Same seasonal period last year increased<br>• Current orders trending upward</span><br><span style="font-weight:600; color:var(--accent);">86% confidence</span></div>
+                                    <div><span class="small text-secondary"><strong style="color:var(--text-primary);">Why</strong><br>• Sales increased 18% last 4 weeks<br>• Same seasonal period last year increased<br>• Current orders trending upward</span><br><span style="font-weight:600; color:var(--accent);">86% confidence</span></div>
                                 </div>
                             </div>
 
@@ -860,7 +860,7 @@
                             </div>
                             <div class="ai-card">
                                 <span style="font-weight:700; color:var(--accent); font-size:0.8rem;">AI INVENTORY ASSISTANT</span>
-                                <p class="small text-secondary" style="margin:8px 0;"><em>"Which products are likely to run out this month?"</em></p>
+                                <p class="small text-secondary" style="margin:8px 0;"><em>"Which products are likely to run out this month"</em></p>
                                 <p class="small text-secondary">AI: I found 8 products at risk. Product A: 94% risk (~6 days) · Product B: 87% risk (~9 days) · Product C: 72% risk (~14 days)</p>
                                 <p class="small text-secondary"><em>"Prepare a purchase order for Product A."</em> → AI prepares draft: Vendor: ABC Supplier · Qty: 240 · Est Cost: ₹1,42,000 · [Confirm & Create PO]</p>
                             </div>
@@ -881,7 +881,7 @@
                             <p class="body-base text-secondary" style="margin-bottom:16px;">A prediction alone isn't enough. Instead of just <strong style="color:var(--text-primary);">"Order 240 units"</strong>, the interface should explain:</p>
                             <div class="ai-card">
                                 <p style="font-weight:700;">Recommended Quantity: <span style="color:var(--accent);">240 units</span></p>
-                                <p style="font-weight:600; font-size:0.9rem;">WHY?</p>
+                                <p style="font-weight:600; font-size:0.9rem;">WHY</p>
                                 <p class="small text-secondary">↑ Demand +28% · Current Stock: 84 · Supplier Lead Time: 9 days · Safety Stock: 30</p>
                                 <div class="risk-bar"><div class="risk-bar-fill" style="width:86%;"></div></div>
                                 <p class="small text-secondary">AI Confidence: 86%</p>
@@ -987,13 +987,13 @@
                         <div id="reflection" class="project-content-section reveal">
                             <h2 class="heading-2 font-semibold" style="margin-bottom:16px;">Final Reflection</h2>
                             <div class="insight-quote" style="margin-bottom:20px;">
-                                <p>"What if the system could help businesses prepare for what happens next?"</p>
+                                <p>"What if the system could help businesses prepare for what happens next"</p>
                             </div>
-                            <p class="body-base text-secondary" style="margin-bottom:16px;">This exploration started with a simple question: <strong style="color:var(--text-primary);">How does an inventory management system actually work?</strong> Mapping Zoho Inventory helped me understand the relationships between products, customers, suppliers, warehouses, orders, and fulfillment.</p>
-                            <p class="body-base text-secondary">The deeper opportunity appeared when I asked: <strong style="color:var(--text-primary);">What if the system could help businesses prepare for what happens next?</strong> That led to the concept of an AI-powered predictive inventory layer capable of forecasting demand, identifying stock risks, optimizing inventory between warehouses, and surfacing recommendations before operational problems occur.</p>
+                            <p class="body-base text-secondary" style="margin-bottom:16px;">This exploration started with a simple question: <strong style="color:var(--text-primary);">How does an inventory management system actually work</strong> Mapping Zoho Inventory helped me understand the relationships between products, customers, suppliers, warehouses, orders, and fulfillment.</p>
+                            <p class="body-base text-secondary">The deeper opportunity appeared when I asked: <strong style="color:var(--text-primary);">What if the system could help businesses prepare for what happens next</strong> That led to the concept of an AI-powered predictive inventory layer capable of forecasting demand, identifying stock risks, optimizing inventory between warehouses, and surfacing recommendations before operational problems occur.</p>
                             <p class="body-base text-secondary">The result isn't intended to replace human decision-making. It's intended to give decision-makers <strong style="color:var(--text-primary);">better information, earlier</strong>.</p>
                             <div class="project-hero-image-wrapper" style="margin-top:24px;">
-                                <img src="https://images.unsplash.com/photo-1488229297570-58520851e868?q=80&w=2069&auto=format&fit=crop" alt="Abstract technology and data visualization representing AI intelligence" class="project-hero-img" loading="lazy" />
+                                <img src="https://images.unsplash.com/photo-1488229297570-58520851e868q=80&w=2069&auto=format&fit=crop" alt="Abstract technology and data visualization representing AI intelligence" class="project-hero-img" loading="lazy" />
                                 <span style="display:block; padding:10px 14px; font-weight:500; font-size:0.85rem; color:var(--text-tertiary);">From reactive monitoring to proactive intelligence</span>
                             </div>
                         </div>
@@ -1030,7 +1030,7 @@
 
     <!-- JavaScript -->
     <script src="../script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BDRFHDY8E"></script>
+    <script async src="https://www.googletagmanager.com/gtag/jsid=G-1BDRFHDY8E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
