@@ -1,5 +1,36 @@
 // Sagar Shivaji Portfolio Website JS Logic
 
+/* ==========================================================================
+   PAGE LOADER — shown immediately, hidden once the page has fully loaded
+   ========================================================================== */
+(function initPageLoaderImmediate() {
+  const loader = document.createElement('div');
+  loader.className = 'page-loader';
+  loader.id = 'pageLoader';
+  loader.innerHTML = '<div class="page-loader-spinner"></div>';
+  document.documentElement.classList.add('is-loading');
+  document.body.appendChild(loader);
+
+  const MIN_DISPLAY_MS = 500;
+  const startTime = Date.now();
+
+  function hideLoader() {
+    const elapsed = Date.now() - startTime;
+    const remaining = Math.max(0, MIN_DISPLAY_MS - elapsed);
+    setTimeout(() => {
+      loader.classList.add('page-loader-hidden');
+      document.documentElement.classList.remove('is-loading');
+      loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+    }, remaining);
+  }
+
+  if (document.readyState === 'complete') {
+    hideLoader();
+  } else {
+    window.addEventListener('load', hideLoader);
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initCommandPalette();
@@ -9,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAiWorkflow();
   initWorkTabs();
   initLightbox();
+  initScrollToTop();
 
   // Initialize metrics if they exist on the page
   if (document.querySelectorAll('.metric-card').length > 0) {
@@ -621,5 +653,29 @@ function initLightbox() {
     if (e.key === 'Escape')     close();
     if (e.key === 'ArrowLeft')  show(current - 1);
     if (e.key === 'ArrowRight') show(current + 1);
+  });
+}
+
+/* ==========================================================================
+   SCROLL TO TOP
+   ========================================================================== */
+function initScrollToTop() {
+  const btn = document.createElement('button');
+  btn.id = 'scrollTopBtn';
+  btn.className = 'scroll-top-btn';
+  btn.setAttribute('aria-label', 'Scroll to top');
+  btn.innerHTML = '↑';
+  document.body.appendChild(btn);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 480) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
