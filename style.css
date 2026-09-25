@@ -2179,7 +2179,7 @@ html.is-loading {
     gap: 40px;
   }
   .project-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 32px;
   }
   .sticky-nav {
@@ -2187,6 +2187,8 @@ html.is-loading {
     flex-direction: row;
     gap: 8px;
     overflow-x: auto;
+    min-width: 0;
+    max-width: 100%;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
   }
@@ -2253,6 +2255,17 @@ html.is-loading {
   /* Portrait badge overflow fix */
   .portrait-badge-top { right: 0; }
   .portrait-badge-bottom { left: 0; }
+
+  /* Case-study pages embed ad-hoc multi-column grids as inline styles
+     (e.g. style="grid-template-columns:1fr 1fr"). A fixed 1fr track has
+     an automatic minimum equal to its content's natural width, so wide
+     unwrapped content in one of these grids can blow out the whole page
+     horizontally on narrow screens. Stack them to a single column here,
+     matching how every class-based grid on the site already collapses
+     at this breakpoint. */
+  [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* ══════════════════════════════════════════
