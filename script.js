@@ -31,7 +31,44 @@
   }
 })();
 
+function getStoredTheme() {
+  try {
+    const saved = localStorage.getItem('sagar_portfolio_theme');
+    if (saved === 'light' || saved === 'dark') return saved;
+  } catch (e) {}
+
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+  const nextTheme = theme === 'dark' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', nextTheme);
+
+  document.querySelectorAll('.theme-toggle-btn').forEach(button => {
+    const isActive = button.dataset.theme === nextTheme;
+    button.classList.toggle('active', isActive);
+    button.setAttribute('aria-pressed', String(isActive));
+  });
+
+  try {
+    localStorage.setItem('sagar_portfolio_theme', nextTheme);
+  } catch (e) {}
+}
+
+function initThemeToggle() {
+  const preferredTheme = getStoredTheme();
+  applyTheme(preferredTheme);
+
+  document.querySelectorAll('.theme-toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedTheme = button.dataset.theme;
+      applyTheme(selectedTheme);
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initNavigation();
   initCommandPalette();
   initCustomCursor();

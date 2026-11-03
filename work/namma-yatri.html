@@ -36,15 +36,19 @@
     .cs-back {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      color: var(--text-secondary);
+      justify-content: center;
+      padding: 10px 18px;
+      background: var(--ny-accent);
+      color: #fff;
+      border-radius: 999px;
       font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 700;
       margin-bottom: 40px;
-      transition: color 0.2s;
+      transition: opacity 0.2s, transform 0.2s;
       text-decoration: none;
+      box-shadow: 0 10px 24px rgba(0, 95, 63, 0.18);
     }
-    .cs-back:hover { color: var(--text-primary); }
+    .cs-back:hover { opacity: 0.94; transform: translateY(-1px); }
 
     /* Hero */
     .cs-hero {
@@ -136,23 +140,31 @@
       gap: 2px;
     }
     .cs-nav a {
-      font-size: 0.8rem;
-      padding: 8px 12px;
-      border-radius: 8px;
-      color: var(--text-tertiary);
+      display: flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: var(--text-secondary);
       transition: all 0.2s;
-      border-left: 2px solid transparent;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(255, 85, 0, 0.06);
+      border: 1px solid transparent;
     }
     .cs-nav a:hover {
       color: var(--text-primary);
-      background: var(--surface);
+      background: rgba(255, 85, 0, 0.1);
+      border-color: rgba(255, 85, 0, 0.16);
     }
     .cs-nav a.active {
       color: #ffffff;
       background: var(--ny-accent);
-      border-left-color: transparent;
+      border-color: transparent;
+      box-shadow: 0 10px 24px rgba(255, 85, 0, 0.2);
     }
 
     /* Content */
@@ -170,13 +182,19 @@
       letter-spacing: -0.01em;
     }
     .cs-section-label {
-      font-size: 0.72rem;
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--ny-accent);
+      color: #ffffff;
+      font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--ny-accent);
-      margin-bottom: 8px;
-      display: block;
+      letter-spacing: 0.08em;
+      line-height: 1;
+      box-shadow: 0 10px 24px rgba(255, 85, 0, 0.2);
     }
 
     /* Cards */
@@ -510,10 +528,7 @@
   <div class="cs-container">
 
     <!-- Back link -->
-    <a href="../index.html" class="cs-back">
-      <span class="material-icons" style="font-size:1.1rem;">arrow_back</span>
-      Back 
-    </a>
+    <a href="../index.html" class="cs-back">Back</a>
 
     <!-- ── HERO ── -->
     <header class="cs-hero">
@@ -1105,9 +1120,7 @@
 
           <div style="text-align:center; margin-top:40px;">
             <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:20px;">Designed by <strong style="color:var(--text-primary);">Sagar Shivaji</strong></p>
-            <a href="../index.html" class="cs-btn-secondary" style="border-radius:30px;">
-              ← Back to Portfolio
-            </a>
+            <a href="../index.html" class="cs-btn-primary" style="border-radius:30px;">Back to Portfolio</a>
           </div>
         </section>
 

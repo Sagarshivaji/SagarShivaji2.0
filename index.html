@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Sagar Shivaji · AI Product Designer</title>
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('sagar_portfolio_theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -29,6 +39,13 @@
     <a href="about.html">About</a>
     <a href="research.html">Research</a>
     <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank">Resume ↗</a>
+    <div class="mobile-theme-section">
+      <span class="small font-medium">Theme</span>
+      <div class="theme-toggle" id="themeToggleMobile" title="Toggle theme">
+        <button class="theme-toggle-btn" data-theme="light" aria-label="Light mode">☀</button>
+        <button class="theme-toggle-btn active" data-theme="dark" aria-label="Dark mode">☾</button>
+      </div>
+    </div>
   </div>
 
   <!-- Command Palette (⌘K) -->
@@ -106,6 +123,10 @@
         <a href="research.html">Research</a>
         <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank">Resume ↗</a>
         <div class="nav-divider"></div>
+        <div class="theme-toggle" id="themeToggle" title="Toggle theme">
+          <button class="theme-toggle-btn" data-theme="light" aria-label="Light mode">☀</button>
+          <button class="theme-toggle-btn active" data-theme="dark" aria-label="Dark mode">☾</button>
+        </div>
         <span class="command-badge" onclick="openCommand()" title="Open Command Palette (⌘K)">⌘K</span>
       </div>
     </div>
@@ -132,14 +153,6 @@
       <section class="hero-section reveal">
         <div class="hero-grid">
           <div class="hero-intro">
-            <div class="availability">
-              <span class="status-dot"></span>
-              <span class="small font-semibold" style="color:#15803d;">Available for select enterprise projects</span>
-              <span class="bullet-divider">·</span>
-              <span class="small text-tertiary">Hyderabad, India</span>
-            </div>
-
-
             <h1 class="hero-identity-headline" style="margin-bottom:20px;">
               <span class="hih-line1">Full-time <em>Product Designer</em></span>
               <span class="hih-line2">&amp; Part-time <em>Developer.</em></span>
@@ -158,15 +171,8 @@
           
           <div class="portrait-container">
             <div class="portrait-glow"></div>
-            <div class="portrait-badge-top">
-              <span>✦</span> AI Product Designer
-            </div>
             <div class="portrait">
               <img src="images/mine.png" alt="Sagar Shivaji portrait" width="300" height="400" style="object-fit: cover; width: 100%; height: 100%;">
-            </div>
-            <div class="portrait-badge-bottom">
-              <strong>Sagar Shivaji</strong>
-              <span>6+ Enterprise SaaS Products</span>
             </div>
           </div>
         </div>
