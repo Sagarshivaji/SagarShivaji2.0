@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProgressAndHeader();
   initAiWorkflow();
   initWorkTabs();
+  initProjectSorting();
   initLightbox();
   initScrollToTop();
 
@@ -526,6 +527,137 @@ function initWorkTabs() {
       }, cards.length * 50 + 400);
     });
   });
+}
+
+function initProjectSorting() {
+  const sortButton = document.getElementById('projectSort');
+  const sortMenu = document.getElementById('projectSortMenu');
+  const sortValue = sortButton?.querySelector('.sort-select-value');
+  const sortOptions = sortMenu ? Array.from(sortMenu.querySelectorAll('.sort-option')) : [];
+  const workCards = document.getElementById('workCards');
+  const viewOptions = document.querySelectorAll('.view-option');
+  if (!sortButton || !sortMenu || !sortValue || !workCards) return;
+
+  const getTimestamp = (card) => {
+    const value = card.dataset.date || '2000-01-01';
+    const parsed = Date.parse(value);
+    return Number.isNaN(parsed) ? 0 : parsed;
+  };
+
+  const setViewMode = (mode) => {
+    workCards.dataset.view = mode;
+    try {
+      localStorage.setItem('sagar_work_view', mode);
+    } catch (e) {}
+    viewOptions.forEach(option => {
+      const isActive = option.dataset.view === mode;
+      option.classList.toggle('active', isActive);
+      option.setAttribute('aria-pressed', String(isActive));
+    });
+  };
+
+  const sortCards = (mode) => {
+    const cards = Array.from(workCards.querySelectorAll('.work-card'));
+    if (!cards.length) return;
+
+    cards.sort((a, b) => {
+      const featuredA = a.dataset.featured === 'true' ? 1 : 0;
+      const featuredB = b.dataset.featured === 'true' ? 1 : 0;
+
+      if (mode === 'featured') {
+        if (featuredA !== featuredB) return featuredB - featuredA;
+      }
+
+      if (mode === 'oldest') {
+        return getTimestamp(a) - getTimestamp(b);
+      }
+
+      return getTimestamp(b) - getTimestamp(a);
+    });
+
+    cards.forEach(card => workCards.appendChild(card));
+  };
+
+  const closeSortMenu = (restoreFocus = false) => {
+    sortMenu.hidden = true;
+    sortButton.setAttribute('aria-expanded', 'false');
+    if (restoreFocus) sortButton.focus();
+  };
+
+  const openSortMenu = () => {
+    sortMenu.hidden = false;
+    sortButton.setAttribute('aria-expanded', 'true');
+    const activeOption = sortMenu.querySelector('.sort-option.active');
+    activeOption?.focus();
+  };
+
+  const selectSortOption = (option) => {
+    const mode = option.dataset.sort;
+    if (!mode) return;
+
+    sortOptions.forEach(item => {
+      const isSelected = item === option;
+      item.classList.toggle('active', isSelected);
+      item.setAttribute('aria-selected', String(isSelected));
+    });
+    sortValue.textContent = option.textContent.trim();
+    sortCards(mode);
+    closeSortMenu(true);
+  };
+
+  sortButton.addEventListener('click', () => {
+    if (sortMenu.hidden) openSortMenu();
+    else closeSortMenu();
+  });
+
+  sortOptions.forEach((option, index) => {
+    option.addEventListener('click', () => selectSortOption(option));
+    option.addEventListener('keydown', event => {
+      let nextIndex = index;
+      if (event.key === 'ArrowDown') nextIndex = (index + 1) % sortOptions.length;
+      else if (event.key === 'ArrowUp') nextIndex = (index - 1 + sortOptions.length) % sortOptions.length;
+      else if (event.key === 'Home') nextIndex = 0;
+      else if (event.key === 'End') nextIndex = sortOptions.length - 1;
+      else if (event.key === 'Escape') {
+        event.preventDefault();
+        closeSortMenu(true);
+        return;
+      } else if (event.key === 'Tab') {
+        closeSortMenu();
+        return;
+      } else {
+        return;
+      }
+
+      event.preventDefault();
+      sortOptions[nextIndex].focus();
+    });
+  });
+
+  sortButton.addEventListener('keydown', event => {
+    if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openSortMenu();
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.sort-select-wrap')) closeSortMenu();
+  });
+
+  viewOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      setViewMode(option.dataset.view);
+    });
+  });
+
+  let preferredView = 'cards';
+  try {
+    const saved = localStorage.getItem('sagar_work_view');
+    if (saved === 'cards' || saved === 'list') preferredView = saved;
+  } catch (e) {}
+  setViewMode(preferredView);
+  sortCards(sortMenu.querySelector('.sort-option.active')?.dataset.sort || 'newest');
 }
 
 /* ==========================================================================
