@@ -573,7 +573,7 @@ function initProjectSorting() {
   const sortOptions = sortMenu ? Array.from(sortMenu.querySelectorAll('.sort-option')) : [];
   const workCards = document.getElementById('workCards');
   const viewOptions = document.querySelectorAll('.view-option');
-  if (!sortButton || !sortMenu || !sortValue || !workCards) return;
+  if (!workCards) return;
 
   const getTimestamp = (card) => {
     const value = card.dataset.date || '2000-01-01';
@@ -614,6 +614,23 @@ function initProjectSorting() {
 
     cards.forEach(card => workCards.appendChild(card));
   };
+
+  const preferredView = (() => {
+    try {
+      const saved = localStorage.getItem('sagar_work_view');
+      if (saved === 'cards' || saved === 'list') return saved;
+    } catch (e) {}
+    return workCards.dataset.view === 'list' ? 'list' : 'cards';
+  })();
+
+  viewOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      setViewMode(option.dataset.view);
+    });
+  });
+  setViewMode(preferredView);
+
+  if (!sortButton || !sortMenu || !sortValue) return;
 
   const closeSortMenu = (restoreFocus = false) => {
     sortMenu.hidden = true;
@@ -682,18 +699,6 @@ function initProjectSorting() {
     if (!event.target.closest('.sort-select-wrap')) closeSortMenu();
   });
 
-  viewOptions.forEach(option => {
-    option.addEventListener('click', () => {
-      setViewMode(option.dataset.view);
-    });
-  });
-
-  let preferredView = 'cards';
-  try {
-    const saved = localStorage.getItem('sagar_work_view');
-    if (saved === 'cards' || saved === 'list') preferredView = saved;
-  } catch (e) {}
-  setViewMode(preferredView);
   sortCards(sortMenu.querySelector('.sort-option.active')?.dataset.sort || 'newest');
 }
 
