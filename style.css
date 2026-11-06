@@ -57,9 +57,10 @@
   --step-icon-hover:    rgba(17, 24, 39, 0.12);
 
   /* ── Buttons ── */
-  --btn-primary-bg:     #111827;
+  --btn-primary-bg:     #FD203D;
   --btn-primary-text:   #ffffff;
-  --btn-primary-hover:  #303846;
+  --btn-primary-hover:  #E31B39;
+  --btn-primary-active: #C9122F;
   --btn-secondary-border: rgba(10, 10, 15, 0.14);
   --btn-secondary-hover:  rgba(10, 10, 15, 0.04);
   --btn-ghost-hover:      rgba(17, 24, 39, 0.05);
@@ -118,9 +119,10 @@ html[data-theme="dark"] {
   --workflow-hover: rgba(255, 255, 255, 0.04);
   --step-icon-bg: rgba(255, 255, 255, 0.08);
   --step-icon-hover: rgba(255, 255, 255, 0.14);
-  --btn-primary-bg: #ffffff;
-  --btn-primary-text: #111827;
-  --btn-primary-hover: #e5e7eb;
+  --btn-primary-bg: #FD203D;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #E31B39;
+  --btn-primary-active: #C9122F;
   --btn-secondary-border: rgba(255, 255, 255, 0.14);
   --btn-secondary-hover: rgba(255, 255, 255, 0.04);
   --btn-ghost-hover: rgba(255, 255, 255, 0.08);
@@ -740,37 +742,56 @@ html[data-theme="dark"] .nav-links a.active:hover {
   letter-spacing: -0.01em;
 }
 .btn-primary {
-  background: #FD203D;
-  color: #ffffff;
-  box-shadow: none;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  box-shadow: 0 10px 24px rgba(253, 32, 61, 0.2);
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus-visible {
   background: var(--btn-primary-hover);
   transform: translateY(-2px);
-  box-shadow: none;
+  box-shadow: 0 14px 28px rgba(253, 32, 61, 0.24);
+}
+.btn-primary:active {
+  background: var(--btn-primary-active);
+  transform: translateY(0);
+  box-shadow: 0 8px 16px rgba(253, 32, 61, 0.18);
 }
 .btn-secondary {
   background: transparent;
   color: var(--text-primary);
   border-color: var(--btn-secondary-border);
 }
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
   background: var(--btn-secondary-hover);
   border-color: rgba(var(--accent-rgb), 0.2);
   color: var(--accent);
   transform: translateY(-2px);
 }
+.btn-secondary:active {
+  background: rgba(var(--accent-rgb), 0.08);
+  transform: translateY(0);
+}
 .btn-outline {
-  
-  color: #ffffff;
-  border: 1.5px solid #FD203D;
+  background: transparent;
+  color: var(--btn-primary-bg);
+  border: 1.5px solid var(--btn-primary-bg);
   box-shadow: none;
 }
-.btn-outline:hover {
-  background: var(--accent);
-  color: var(--accent-contrast) !important;
+.btn-outline:hover,
+.btn-outline:focus-visible {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text) !important;
+  border-color: var(--btn-primary-bg);
   transform: translateY(-2px);
-  box-shadow: none;
+  box-shadow: 0 12px 24px rgba(253, 32, 61, 0.2);
+}
+.btn-outline:active {
+  background: var(--btn-primary-active);
+  border-color: var(--btn-primary-active);
+  color: var(--btn-primary-text);
+  transform: translateY(0);
 }
 .btn-outline .arrow {
   transition: transform 0.2s ease;
@@ -784,10 +805,15 @@ html[data-theme="dark"] .nav-links a.active:hover {
   padding: 10px 18px;
   border: 1px solid rgba(var(--accent-rgb), 0.14);
 }
-.btn-ghost:hover {
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
   background: var(--btn-ghost-hover);
   color: var(--accent);
   border-color: rgba(var(--accent-rgb), 0.25);
+}
+.btn-ghost:active {
+  background: rgba(var(--accent-rgb), 0.12);
+  transform: translateY(0);
 }
 .btn-large {
   height: 52px;
@@ -1081,21 +1107,28 @@ html[data-theme="dark"] .nav-links a.active:hover {
   gap: 6px;
   font-weight: 600;
   font-size: 13px;
-  color: #ffffff;
-  background: #FD203D;
-  
+  color: var(--btn-primary-text);
+  background: var(--btn-primary-bg);
+  border: 1.5px solid var(--btn-primary-bg);
   padding: 7px 18px;
   text-decoration: none;
   border-radius: 100px;
-  box-shadow: none;
+  box-shadow: 0 10px 24px rgba(253, 32, 61, 0.18);
   width: fit-content;
   align-self: flex-start;
   transition: all 0.22s ease;
 }
-.card-cta:hover {
+.card-cta:hover,
+.card-cta:focus-visible {
   background: var(--btn-primary-hover);
   color: var(--btn-primary-text);
   border-color: var(--btn-primary-hover);
+  transform: translateY(-2px);
+}
+.card-cta:active {
+  background: var(--btn-primary-active);
+  border-color: var(--btn-primary-active);
+  transform: translateY(0);
 }
 .card-cta .arrow {
   font-size: 15px;
