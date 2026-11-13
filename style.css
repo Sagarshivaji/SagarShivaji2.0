@@ -452,7 +452,7 @@ ol,
 .cs-note-banner,
 .nda-notice,
 .nda-bar {
-  border-radius: 0 !important;
+  
   box-shadow: none !important;
   text-shadow: none !important;
 }
@@ -467,7 +467,7 @@ html[data-theme="dark"] .nav-inner,
 .nav-inner {
   background: rgba(6, 2, 12, 0.94) !important;
   border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
-  border-radius: 0 !important;
+  
   box-shadow: none !important;
   backdrop-filter: blur(24px) saturate(1.8) !important;
   -webkit-backdrop-filter: blur(24px) saturate(1.8) !important;
@@ -498,7 +498,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill),
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   padding: 8px 16px !important;
-  border-radius: 0 !important;
+   : 0 !important;
   border: 1px solid transparent !important;
   transition: all 0.2s ease !important;
 }
@@ -532,7 +532,7 @@ a.nav-resume-pill,
   color: #000000 !important;
   -webkit-text-fill-color: #000000 !important;
   border: 1.5px solid #ffffff !important;
-  border-radius: 0 !important;
+   : 0 !important;
   box-shadow: none !important;
   font-weight: 800 !important;
   font-size: 12px !important;
@@ -561,7 +561,7 @@ html[data-theme="dark"] .command-badge,
   background: rgba(255, 255, 255, 0.08) !important;
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
   color: #ffffff !important;
-  border-radius: 0 !important;
+   : 0 !important;
   font-weight: 700 !important;
 }
 
@@ -677,7 +677,7 @@ html.is-loading {
 .page-loader-spinner {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
+  
   border: 3px solid var(--border);
   border-top-color: var(--accent);
   animation: pageLoaderSpin 0.8s linear infinite;
@@ -695,7 +695,7 @@ html.is-loading {
   bottom: 28px;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  
   border: 1px solid var(--card-border);
   background: var(--accent);
   color: var(--accent-contrast);
@@ -746,7 +746,6 @@ html.is-loading {
   width: 22px;
   height: 22px;
   border: 1.5px solid var(--accent);
-  border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -758,7 +757,6 @@ html.is-loading {
   width: 4px;
   height: 4px;
   background: var(--accent);
-  border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -877,7 +875,7 @@ html.is-loading {
   height: 52px;
   background: rgba(10, 10, 15, 0.85); /* Dark like footer */
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 100px;
+  
   backdrop-filter: blur(20px) saturate(1.6);
   -webkit-backdrop-filter: blur(20px) saturate(1.6);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
@@ -900,7 +898,7 @@ html.is-loading {
   color: var(--accent-contrast);
   width: 30px;
   height: 30px;
-  border-radius: 8px;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -928,7 +926,7 @@ html.is-loading {
   font-weight: 500;
   font-size: 14px;
   padding: 6px 14px;
-  border-radius: 0;
+   : 0;
   transition: all 0.2s ease;
   position: relative;
 }
@@ -960,7 +958,6 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   align-items: center;
   gap: 4px;
   padding: 4px;
-  border-radius: 999px;
   background: rgba(10, 10, 15, 0.04);
   border: 1px solid rgba(10, 10, 15, 0.08);
 }
@@ -971,7 +968,6 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   color: #ffffff;
   width: 28px;
   height: 28px;
-  border-radius: 50%;
   font-size: 14px;
   cursor: pointer;
   display: grid;
@@ -1041,7 +1037,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: rgba(255, 255, 255, 0.7);
   padding: 4px 10px;
-  border-radius: 6px;
+
   font-size: 11px;
   font-weight: 600;
   cursor: pointer;
@@ -1061,7 +1057,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   display: none;
   background: rgba(255, 255, 255, 0.08) !important;
   border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
-  border-radius: 0 !important;
+   : 0 !important;
   box-shadow: none !important;
   color: #ffffff !important;
   cursor: pointer;
@@ -1092,7 +1088,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   right: 16px;
   background: #06020c !important;
   border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
-  border-radius: 0 !important;
+   : 0 !important;
   box-shadow: none !important;
   z-index: 1001;
   padding: 12px;
@@ -1108,7 +1104,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   font-size: 14px !important;
   letter-spacing: 0.06em !important;
   text-transform: uppercase !important;
-  border-radius: 0 !important;
+   : 0 !important;
   border: 1px solid transparent !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
   transition: all 0.2s ease !important;
@@ -1131,7 +1127,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   color: #000000 !important;
   -webkit-text-fill-color: #000000 !important;
   border: 1.5px solid #ffffff !important;
-  border-radius: 0 !important;
+   : 0 !important;
   font-weight: 800 !important;
   margin-top: 8px !important;
   text-align: center !important;
@@ -1155,7 +1151,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  border-radius: 100px;
+  
   font-weight: 600;
   text-decoration: none;
   font-size: 14px;
@@ -1283,13 +1279,13 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   background: #F0FDF6;
   border: 1px solid rgba(0, 197, 102, 0.25);
   padding: 7px 16px;
-  border-radius: 100px;
+  
   margin-bottom: 28px;
 }
 .status-dot {
   width: 7px;
   height: 7px;
-  border-radius: 50%;
+  
   background: var(--status-dot);
 }
 .bullet-divider {
@@ -1313,7 +1309,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  border-radius: 999px;
+  
   background: rgba(124, 58, 237, 0.12);
   border: 1px solid rgba(124, 58, 237, 0.24);
   color: #6d4aff;
@@ -1338,7 +1334,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   background: var(--bg-subtle);
   border: 1px solid var(--border);
   padding: 6px 14px;
-  border-radius: 100px;
+  
   transition: all 0.2s ease;
 }
 .hero-chip:hover {
@@ -1395,7 +1391,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   aspect-ratio: 3/4;
   background: linear-gradient(180deg, #ffffff 0%, var(--bg-subtle) 100%);
   border: 1px solid rgba(var(--accent-rgb), 0.12);
-  border-radius: var(--radius-xl);
+  
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -1417,7 +1413,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   z-index: 4;
   background: var(--text-primary);
   border: none;
-  border-radius: 100px;
+  
   padding: 8px 14px;
   display: flex;
   align-items: center;
@@ -1440,7 +1436,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   z-index: 4;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(var(--accent-rgb), 0.15);
-  border-radius: var(--radius-md);
+   : var(--radius-md);
   padding: 10px 16px;
   box-shadow: 0 2px 8px rgba(10, 10, 15, 0.06);
   backdrop-filter: blur(16px);
@@ -1502,7 +1498,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   gap: 48px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-xl);
+   : var(--radius-xl);
   padding: 48px;
   margin-bottom: 28px;
   align-items: center;
@@ -1521,7 +1517,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   background: var(--accent-light);
   border: 1px solid rgba(var(--accent-rgb), 0.15);
   padding: 4px 10px;
-  border-radius: 100px;
+   : 100px;
   letter-spacing: -0.01em;
 }
 .card-cta {
@@ -1535,7 +1531,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   border: 1.5px solid var(--btn-primary-bg);
   padding: 7px 18px;
   text-decoration: none;
-  border-radius: 100px;
+   : 100px;
   box-shadow: 0 10px 24px rgba(253, 32, 61, 0.18);
   width: fit-content;
   align-self: flex-start;
@@ -1563,7 +1559,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 
 /* Case image */
 .case-image-wrapper {
-  border-radius: var(--radius-lg);
+   : var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border);
   aspect-ratio: 4/3;
@@ -1598,7 +1594,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 .metric-card {
   background: var(--bg-subtle);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
+   : var(--radius-lg);
   padding: 28px 32px;
   transition: all 0.25s ease;
 }
@@ -1626,7 +1622,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 .ai-workflow-container {
   background: var(--bg-subtle);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-xl);
+   : var(--radius-xl);
   padding: 12px;
   overflow: hidden;
 }
@@ -1635,7 +1631,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   gap: 20px;
   align-items: center;
   padding: 18px 24px;
-  border-radius: var(--radius-md);
+   : var(--radius-md);
   transition: all 0.25s ease;
   cursor: pointer;
   border: 1px solid transparent;
@@ -1649,7 +1645,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   height: 36px;
   background: var(--step-icon-bg);
   border: 1px solid rgba(var(--accent-rgb), 0.14);
-  border-radius: 10px;
+   : 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1679,7 +1675,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 .ai-detail-card {
   background: var(--card-bg);
   border: 1px solid rgba(var(--accent-rgb), 0.12);
-  border-radius: var(--radius-md);
+   : var(--radius-md);
   padding: 28px;
   margin: 8px 24px 16px;
   display: none;
@@ -1722,14 +1718,14 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 .ai-progress-dot {
   width: 6px;
   height: 6px;
-  border-radius: 50%;
+   : 50%;
   background: var(--border);
   transition: all 0.2s;
 }
 .ai-progress-dot.filled {
   background: var(--accent);
   width: 24px;
-  border-radius: 3px;
+   : 3px;
 }
 
 /* ══════════════════════════════════════════
@@ -1748,7 +1744,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   gap: 8px;
   background: var(--work-tabs-bg);
   border: 1.5px solid var(--work-tabs-bg);
-  border-radius: 100px;
+   : 100px;
   padding: 6px;
   width: fit-content;
   flex-wrap: wrap;
@@ -1758,7 +1754,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 .work-tab {
   position: relative;
   padding: 10px 24px;
-  border-radius: 100px;
+   : 100px;
   border: none;
   background: transparent;
   color: var(--work-tab-text);
@@ -1798,7 +1794,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   padding: 4px 6px 4px 14px;
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  border-radius: 999px;
+   : 999px;
   box-shadow: 0 1px 3px rgba(10, 10, 15, 0.04);
 }
 
@@ -1821,7 +1817,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   min-height: 38px;
   padding: 0 10px;
   border: 1px solid transparent;
-  border-radius: 10px;
+   : 10px;
   background: transparent;
   color: var(--text-primary);
   font: 600 14px var(--font-body);
@@ -1864,7 +1860,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   min-width: 148px;
   padding: 5px;
   border: 1px solid rgba(10, 10, 15, 0.09);
-  border-radius: 12px;
+   : 12px;
   background: #ffffff;
   box-shadow: 0 12px 32px rgba(10, 10, 15, 0.14), 0 2px 8px rgba(10, 10, 15, 0.05);
   animation: sortMenuIn 0.14s ease-out;
@@ -1881,7 +1877,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   min-height: 38px;
   padding: 0 11px;
   border: 0;
-  border-radius: 8px;
+   : 8px;
   background: transparent;
   color: var(--text-secondary);
   font: 500 13px var(--font-body);
@@ -1916,7 +1912,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   padding: 3px;
   background: #111827;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 10px;
+   : 10px;
 }
 
 .view-option {
@@ -1927,7 +1923,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 7px;
+   : 7px;
   background: transparent;
   color: #ffffff;
   cursor: pointer;
@@ -1981,7 +1977,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   box-sizing: border-box;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-xl);
+   : var(--radius-xl);
   cursor: pointer;
   align-items: stretch;
   transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
@@ -2000,7 +1996,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   order: -1;
   width: 100%;
   aspect-ratio: 16 / 10;
-  border-radius: var(--radius-lg);
+   : var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg-subtle);
@@ -2083,7 +2079,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   margin-bottom: 0;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-xl);
+   : var(--radius-xl);
   cursor: pointer;
   transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
               box-shadow 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
@@ -2104,7 +2100,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   height: 100%;
   min-height: 190px;
   margin-bottom: 0;
-  border-radius: var(--radius-lg);
+   : var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg-subtle);
@@ -2173,7 +2169,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
     gap: 6px !important;
     background: var(--work-tabs-bg) !important;
     border: 1px solid var(--border) !important;
-    border-radius: 100px !important;
+     : 100px !important;
     box-sizing: border-box !important;
   }
 
@@ -2187,7 +2183,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
     padding: 8px 16px !important;
     font-size: 13px !important;
     font-weight: 600 !important;
-    border-radius: 100px !important;
+     : 100px !important;
     color: var(--work-tab-text) !important;
   }
 
@@ -2207,7 +2203,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
     padding: 4px 12px 4px 14px !important;
     background: var(--bg-secondary) !important;
     border: 1px solid var(--border) !important;
-    border-radius: 100px !important;
+     : 100px !important;
   }
 
   .project-sortbar label {
@@ -2240,7 +2236,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
     width: 100% !important;
     padding: 22px !important;
     margin-bottom: 0 !important;
-    border-radius: var(--radius-xl, 20px) !important;
+     : var(--radius-xl, 20px) !important;
     box-sizing: border-box !important;
   }
 
@@ -2252,7 +2248,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
     aspect-ratio: 16 / 10 !important;
     min-height: unset !important;
     margin-bottom: 16px !important;
-    border-radius: var(--radius-lg, 14px) !important;
+     : var(--radius-lg, 14px) !important;
   }
 
   /* Remove description and chips on mobile */
@@ -2294,7 +2290,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
     border: 1.5px solid var(--btn-primary-bg) !important;
     color: var(--btn-primary-text) !important;
     box-shadow: none !important;
-    border-radius: 100px !important;
+     : 100px !important;
     align-self: flex-start !important;
     margin-top: auto !important;
   }
@@ -2347,7 +2343,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   text-align: center;
   padding: 72px 0;
   border: 1.5px dashed var(--border);
-  border-radius: var(--radius-xl);
+   : var(--radius-xl);
   background: var(--bg-subtle);
 }
 
@@ -2379,7 +2375,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   top: 6px;
   width: 9px;
   height: 9px;
-  border-radius: 50%;
+   : 50%;
   background: var(--accent);
 }
 .timeline-header {
@@ -2397,7 +2393,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 .research-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
+   : var(--radius-lg);
   padding: 36px;
   margin-bottom: 20px;
   box-shadow: var(--card-shadow);
@@ -2416,7 +2412,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 .research-stat-card {
   background: var(--bg-subtle);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-md);
+   : var(--radius-md);
   padding: 24px;
 }
 
@@ -2438,7 +2434,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 ══════════════════════════════════════════ */
 .project-hero-image-wrapper {
   width: 100%;
-  border-radius: var(--radius-xl);
+   : var(--radius-xl);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
   margin: 32px 0 48px;
@@ -2517,7 +2513,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   padding: 10px 26px;
   background: #ffffff;
   color: #000000;
-  border-radius: 9999px;
+   : 9999px;
   font-weight: 700;
   font-size: 14px;
   text-decoration: none;
@@ -2553,7 +2549,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 18px;
+   : 18px;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
 }
 .sticky-nav::-webkit-scrollbar {
@@ -2564,7 +2560,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 }
 .sticky-nav::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.18);
-  border-radius: 4px;
+   : 4px;
 }
 .sticky-nav-header {
   font-size: 10px;
@@ -2582,7 +2578,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   display: inline-block;
   width: 6px;
   height: 6px;
-  border-radius: 50%;
+   : 50%;
   background: #c084fc;
   box-shadow: 0 0 8px #c084fc;
 }
@@ -2598,7 +2594,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   border: 1px solid transparent;
   transition: all 0.2s ease;
   letter-spacing: 0.01em;
-  border-radius: 999px;
+   : 999px;
   background: transparent;
 }
 .sticky-nav a:hover {
@@ -2650,7 +2646,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 .cs-mockup-frame {
   background: #000000;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
+   : 16px;
   padding: 24px;
   margin: 28px 0 40px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
@@ -2660,14 +2656,14 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
+   : 8px;
 }
 
 /* ── Note / Confidentiality Banner ── */
 .cs-note-banner {
   background: #000000;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
+   : 12px;
   padding: 22px 28px;
   margin: 48px 0 60px;
   font-size: 14px;
@@ -2751,14 +2747,14 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 .project-sidebar-stat {
   background: var(--bg-subtle);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
+   : var(--radius-lg);
   padding: 32px;
   text-align: center;
 }
 .metric-result-card {
   background: var(--bg-subtle);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
+   : var(--radius-lg);
   padding: 32px;
 }
 
@@ -2780,7 +2776,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 .command-overlay.active { display: flex; }
 .command-panel {
   background: var(--command-panel-bg);
-  border-radius: var(--radius-xl);
+   : var(--radius-xl);
   border: 1px solid var(--border);
   width: 580px;
   max-width: 90vw;
@@ -2813,7 +2809,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   background: var(--command-shortcut-bg);
   color: var(--text-tertiary);
   padding: 4px 8px;
-  border-radius: 4px;
+   : 4px;
   border: 1px solid var(--border);
 }
 .command-results {
@@ -2831,7 +2827,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 }
 .command-item {
   padding: 12px 16px;
-  border-radius: var(--radius-sm);
+   : var(--radius-sm);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -2853,7 +2849,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   color: var(--text-tertiary);
   background: var(--command-shortcut-bg);
   padding: 3px 6px;
-  border-radius: 4px;
+   : 4px;
   border: 1px solid var(--border);
 }
 
@@ -2873,7 +2869,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 
 .graphic-item {
   position: relative;
-  border-radius: var(--radius-lg);
+   : var(--radius-lg);
   overflow: hidden;
   background: var(--bg-subtle);
   border: 1px solid var(--card-border);
@@ -2948,7 +2944,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   font-size: 48px;
   background: linear-gradient(135deg, var(--bg-subtle) 0%, var(--accent-light) 100%);
   border: 2px dashed rgba(var(--accent-rgb), 0.18);
-  border-radius: var(--radius-lg);
+   : var(--radius-lg);
   color: var(--text-tertiary);
   transition: background 0.3s ease;
 }
@@ -2989,7 +2985,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   transform: scale(0.88) translateY(20px);
   opacity: 0;
   transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.35s ease;
-  border-radius: 12px;
+   : 12px;
   overflow: hidden;
   box-shadow: 0 40px 100px rgba(0,0,0,0.6);
 }
@@ -3005,7 +3001,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   width: auto;
   height: auto;
   object-fit: contain;
-  border-radius: 12px;
+   : 12px;
 }
 
 /* Caption bar */
@@ -3040,7 +3036,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   right: 24px;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+   : 50%;
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.15);
   color: #fff;
@@ -3065,7 +3061,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   transform: translateY(-50%);
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+   : 50%;
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.15);
   color: #fff;
@@ -3204,7 +3200,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.28);
   padding: 7px 14px;
-  border-radius: 0;
+   : 0;
 }
 
 .footer-col {
@@ -3296,7 +3292,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   margin: 40px 0;
   background: var(--accent-light);
   border: 1px solid rgba(var(--accent-rgb), 0.18);
-  border-radius: var(--radius-lg);
+   : var(--radius-lg);
   font-family: var(--font-body);
 }
 .nda-label {
@@ -3306,7 +3302,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   margin-bottom: 20px;
   padding: 6px 10px;
   background: rgba(var(--accent-rgb), 0.1);
-  border-radius: 6px;
+   : 6px;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -3347,7 +3343,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   align-items: center;
   margin-bottom: 16px;
   padding: 8px 12px;
-  border-radius: 999px;
+   : 999px;
   background: var(--accent);
   color: #ffffff;
   font-size: 11px;
@@ -3384,7 +3380,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   height: 320px;
   display: block;
   object-fit: cover;
-  border-radius: var(--radius-md);
+   : var(--radius-md);
   background: var(--bg-subtle);
   filter: grayscale(8%);
   transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
@@ -3434,7 +3430,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   background: #ffffff;
   border: 1px solid rgba(10, 10, 15, 0.08);
   padding: 16px 12px;
-  border-radius: 100px;
+   : 100px;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 12px 32px rgba(10, 10, 15, 0.06);
@@ -3446,7 +3442,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 999px;
+   : 999px;
   background: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
@@ -3534,7 +3530,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   background: var(--card-bg);
   border: 1px solid var(--border);
   padding: 12px 24px;
-  border-radius: 100px;
+   : 100px;
   white-space: nowrap;
   box-shadow: 0 4px 12px rgba(10, 10, 15, 0.03);
   transition: all 0.25s ease;
@@ -3616,7 +3612,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
-    border-radius: 0 !important;
+     : 0 !important;
     box-shadow: none !important;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -3634,7 +3630,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
     font-weight: 700 !important;
     letter-spacing: 0.05em !important;
     text-transform: uppercase !important;
-    border-radius: 0 !important;
+     : 0 !important;
     border: 1px solid rgba(255, 255, 255, 0.22) !important;
     background: rgba(0, 0, 0, 0.45) !important;
     color: rgba(255, 255, 255, 0.88) !important;
@@ -3692,7 +3688,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
     padding: 0 16px !important;
     border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
     background: rgba(6, 2, 12, 0.96) !important;
-    border-radius: 0 !important;
+     : 0 !important;
     box-shadow: none !important;
     box-sizing: border-box !important;
     height: 52px;
@@ -3717,7 +3713,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
     width: 100% !important;
     text-align: center !important;
     padding: 12px 20px !important;
-    border-radius: 0 !important;
+     : 0 !important;
   }
   .work-controls {
     flex-direction: column !important;
@@ -3736,11 +3732,11 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   }
   .work-tab {
     flex-shrink: 0 !important;
-    border-radius: 0 !important;
+     : 0 !important;
   }
   .badge-recommended,
   .skill-item {
-    border-radius: 0 !important;
+     : 0 !important;
   }
   .hero-section { padding: 120px 0 56px; }
   .hero-actions {
@@ -3858,7 +3854,6 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
   background: #00C566;
   color: #ffffff;
   padding: 4px 10px;
-  border-radius: 0 !important;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
@@ -3868,7 +3863,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 
 /* ══════════════════════════════════════════
    GLOBAL ARCHITECTURAL BRUTALIST OVERRIDE
-   Zero Border-Radius & Zero Box-Shadow & High Contrast
+   Zero   & Zero Box-Shadow & High Contrast
    Permanently active on desktop, tablet, and mobile
 ══════════════════════════════════════════ */
 *,
@@ -3944,7 +3939,7 @@ input,
 button,
 select,
 textarea {
-  border-radius: 0 !important;
+   : 0 !important;
 }
 
 /* Color Contrast Safeguards */
