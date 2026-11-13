@@ -32,39 +32,18 @@
 })();
 
 function getStoredTheme() {
-  try {
-    const saved = localStorage.getItem('sagar_portfolio_theme');
-    if (saved === 'light' || saved === 'dark') return saved;
-  } catch (e) {}
-
-  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return 'dark';
 }
 
-function applyTheme(theme) {
-  const nextTheme = theme === 'dark' ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', nextTheme);
-
-  document.querySelectorAll('.theme-toggle-btn').forEach(button => {
-    const isActive = button.dataset.theme === nextTheme;
-    button.classList.toggle('active', isActive);
-    button.setAttribute('aria-pressed', String(isActive));
-  });
-
+function applyTheme() {
+  document.documentElement.setAttribute('data-theme', 'dark');
   try {
-    localStorage.setItem('sagar_portfolio_theme', nextTheme);
+    localStorage.setItem('sagar_portfolio_theme', 'dark');
   } catch (e) {}
 }
 
 function initThemeToggle() {
-  const preferredTheme = getStoredTheme();
-  applyTheme(preferredTheme);
-
-  document.querySelectorAll('.theme-toggle-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const selectedTheme = button.dataset.theme;
-      applyTheme(selectedTheme);
-    });
-  });
+  applyTheme();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -381,30 +360,39 @@ function initProgressAndHeader() {
 }
 
 function updateStickySidebarState() {
-  const sections = document.querySelectorAll('.project-content-section');
-  const navLinks = document.querySelectorAll('.sticky-nav a');
-  if (sections.length === 0 || navLinks.length === 0) return;
+  const navLinks = document.querySelectorAll('.sticky-nav a, .cs-nav a');
+  if (navLinks.length === 0) return;
 
-  let activeSectionId = '';
-  const scrollPos = window.scrollY + 160; // offset for navbar height + buffer
+  const sectionLinks = Array.from(navLinks).filter(link => {
+    const href = link.getAttribute('href');
+    return href && href.startsWith('#') && href.length > 1;
+  });
+
+  if (sectionLinks.length === 0) return;
+
+  const sections = sectionLinks
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  if (sections.length === 0) return;
+
+  let activeSectionId = sections[0].id;
+  const scrollPos = window.scrollY + 180;
 
   sections.forEach(section => {
-    // Use getBoundingClientRect to calculate absolute document-relative position
     const sectionTop = section.getBoundingClientRect().top + window.scrollY;
     if (scrollPos >= sectionTop) {
       activeSectionId = section.getAttribute('id');
     }
   });
 
-  if (activeSectionId) {
-    navLinks.forEach(link => {
-      if (link.getAttribute('href') === `#${activeSectionId}`) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-  }
+  sectionLinks.forEach(link => {
+    if (link.getAttribute('href') === `#${activeSectionId}`) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
 }
 
 /* ==========================================================================

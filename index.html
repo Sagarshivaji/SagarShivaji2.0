@@ -1,25 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark" data-project="home">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Sagar Shivaji · AI Product Designer</title>
+  <title>SAGAR · AI Product Designer</title>
   <script>
-    (function() {
-      try {
-        const savedTheme = localStorage.getItem('sagar_portfolio_theme');
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : (prefersDark ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
-      } catch (e) {}
-    })();
+    document.documentElement.setAttribute('data-theme', 'dark');
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="theme-home">
   <!-- Subtle gradient mesh background -->
   <div class="glow-bg glow-bg-1"></div>
   <div class="glow-bg glow-bg-2"></div>
@@ -39,13 +32,6 @@
     <a href="about.html">About</a>
     <a href="research.html">Research</a>
     <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank">Resume ↗</a>
-    <div class="mobile-theme-section">
-      <span class="small font-medium">Theme</span>
-      <div class="theme-toggle" id="themeToggleMobile" title="Toggle theme">
-        <button class="theme-toggle-btn" data-theme="light" aria-label="Light mode">☀</button>
-        <button class="theme-toggle-btn active" data-theme="dark" aria-label="Dark mode">☾</button>
-      </div>
-    </div>
   </div>
 
   <!-- Command Palette (⌘K) -->
@@ -103,11 +89,11 @@
     </div>
   </div>
 
-  <!-- Desktop Navigation — Floating Pill -->
+  <!-- Desktop Navigation -->
   <nav class="nav" id="navbar">
     <div class="nav-inner">
       <div class="nav-logo" onclick="window.location.href='index.html'">
-        <span class="logo-text">Sagar Shivaji</span>
+        <span class="logo-text">SAGAR</span>
       </div>
       <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -121,12 +107,7 @@
         <a href="work.html">Work</a>
         <a href="about.html">About</a>
         <a href="research.html">Research</a>
-        <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank">Resume ↗</a>
-        <div class="nav-divider"></div>
-        <div class="theme-toggle" id="themeToggle" title="Toggle theme">
-          <button class="theme-toggle-btn" data-theme="light" aria-label="Light mode">☀</button>
-          <button class="theme-toggle-btn active" data-theme="dark" aria-label="Dark mode">☾</button>
-        </div>
+        <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank" class="nav-resume-pill">Resume ↗</a>
         <span class="command-badge" onclick="openCommand()" title="Open Command Palette (⌘K)">⌘K</span>
       </div>
     </div>

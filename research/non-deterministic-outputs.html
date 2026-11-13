@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-project="research">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Designing for Non-Deterministic Outputs · Sagar Shivaji</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="theme-research">
   <!-- Custom Glow Backgrounds -->
   <div class="glow-bg glow-bg-1"></div>
   <div class="glow-bg glow-bg-2"></div>
@@ -27,15 +27,8 @@
     <a href="../index.html">Home</a>
     <a href="../work.html">Work</a>
     <a href="../about.html">About</a>
-    <a href="../research.html">Research</a>
-    <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank">Resume</a>
-    <div class="mobile-theme-section">
-      <span class="small font-medium">Theme</span>
-      <div class="theme-toggle" id="themeToggleMobile" title="Toggle theme">
-        <button class="theme-toggle-btn" data-theme="light" aria-label="Light mode">☀</button>
-        <button class="theme-toggle-btn active" data-theme="dark" aria-label="Dark mode">☾</button>
-      </div>
-    </div>
+    <a href="../research.html" class="active">Research</a>
+    <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank">Resume ↗</a>
   </div>
 
   <!-- Command Palette (⌘K) -->
@@ -81,12 +74,11 @@
     </div>
   </div>
 
-  <!-- Desktop Navigation Bar -->
+  <!-- Desktop Navigation -->
   <nav class="nav" id="navbar">
     <div class="nav-inner">
       <div class="nav-logo" onclick="window.location.href='../index.html'">
-        <span class="logo-mark">S</span>
-        <span class="logo-text">Sagar Shivaji</span>
+        <span class="logo-text">SAGAR</span>
       </div>
       <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -99,13 +91,8 @@
         <a href="../index.html">Home</a>
         <a href="../work.html">Work</a>
         <a href="../about.html">About</a>
-        <a href="../research.html">Research</a>
-        <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank">Resume</a>
-        <div class="nav-divider"></div>
-        <div class="theme-toggle" id="themeToggle" title="Toggle theme">
-          <button class="theme-toggle-btn" data-theme="light" aria-label="Light mode">☀</button>
-          <button class="theme-toggle-btn active" data-theme="dark" aria-label="Dark mode">☾</button>
-        </div>
+        <a href="../research.html" class="active">Research</a>
+        <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank" class="nav-resume-pill">Resume ↗</a>
         <span class="command-badge" onclick="openCommand()" title="Open Command Palette (⌘K)">⌘K</span>
       </div>
     </div>
@@ -154,11 +141,14 @@
       </article>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-inner">
-        <span class="small text-tertiary">© Sagar Shivaji 2026</span>
-        <div class="footer-links">
-          <a href="../research.html" class="small text-tertiary footer-link">Back to research</a>
+    <!-- Minimal Black Footer (Matches Designer Reference) -->
+    <footer class="cs-minimal-footer">
+      <div class="cs-minimal-footer-inner">
+        <a href="../index.html" class="footer-logo">SAGAR</a>
+        <a href="mailto:sagarsdeshmukh@gmail.com" class="footer-email">sagarsdeshmukh@gmail.com</a>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/sagar-shivaji-090904262/" target="_blank">LINKEDIN</a>
+          <a href="https://www.behance.net/sagarshivaji" target="_blank">BEHANCE</a>
         </div>
       </div>
     </footer>

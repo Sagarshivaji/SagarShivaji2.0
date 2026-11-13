@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark" data-project="namma-yatri">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Frictionless Civic Complaint · Namma Yatri · Sagar Shivaji</title>
-  <meta name="description" content="A simpler, safer and more transparent way to report civic issues — a Namma Yatri design   by Sagar Shivaji.">
+  <meta name="description" content="A simpler, safer and more transparent way to report civic issues — a Namma Yatri design by Sagar Shivaji.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <style>
     /* ============================================================
-       CASE STUDY — NAMMA YATRI
+       CASE STUDY — NAMMA YATRI (CIVIC TECH GREEN)
        ============================================================ */
     :root {
-      --ny-accent: #005F3F;
-      --ny-accent-light: rgba(0, 95, 63, 0.1);
+      --ny-accent: #10B981;
+      --ny-accent-light: rgba(16, 185, 129, 0.15);
       --ny-success: #10B981;
     }
 
     .cs-body {
-      background: var(--bg);
+      background: var(--bg-primary) !important;
       color: var(--text-primary);
       padding-top: 100px;
     }
@@ -482,7 +482,7 @@
     }
   </style>
 </head>
-<body class="cs-body">
+<body class="cs-body theme-nammayatri">
 
   <!-- Custom Cursor -->
   <div class="custom-cursor" id="customCursor"></div>
@@ -505,7 +505,7 @@
   <nav class="nav" id="navbar">
     <div class="nav-inner">
       <div class="nav-logo" onclick="window.location.href='../index.html'">
-        <span class="logo-text">Sagar Shivaji</span>
+        <span class="logo-text">SAGAR</span>
       </div>
       <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -519,7 +519,7 @@
         <a href="../work.html" class="active">Work</a>
         <a href="../about.html">About</a>
         <a href="../research.html">Research</a>
-        <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank">Resume ↗</a>
+        <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank" class="nav-resume-pill">Resume ↗</a>
       </div>
     </div>
   </nav>

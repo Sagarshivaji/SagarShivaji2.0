@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark" data-project="about">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Sagar Shivaji · About</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style> /* ── Design Profile Section ── */
 .design-profile-section {
@@ -309,11 +309,7 @@
   }
 }</style>
 </head>
-<body>
-  <!-- Custom Glow Backgrounds -->
-  <div class="glow-bg glow-bg-1"></div>
-  <div class="glow-bg glow-bg-2"></div>
-
+<body class="theme-about">
   <!-- Custom Cursor -->
   <div class="custom-cursor" id="customCursor"></div>
   <div class="custom-cursor-dot" id="customCursorDot"></div>
@@ -326,16 +322,9 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="work.html">Work</a>
-    <a href="about.html">About</a>
+    <a href="about.html" class="active">About</a>
     <a href="research.html">Research</a>
     <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank">Resume ↗</a>
-    <div class="mobile-theme-section">
-      <span class="small font-medium">Theme</span>
-      <div class="theme-toggle" id="themeToggleMobile" title="Toggle theme">
-        <button class="theme-toggle-btn" data-theme="light" aria-label="Light mode">☀</button>
-        <button class="theme-toggle-btn active" data-theme="dark" aria-label="Dark mode">☾</button>
-      </div>
-    </div>
   </div>
 
   <!-- Command Palette (⌘K) -->
@@ -365,21 +354,29 @@
         </div>
 
         <div class="command-group-title">Case Studies</div>
-        <div class="command-item" data-action="work/job-pulse.html">
-          <span class="command-item-left">Job Pulse Alert Dashboard</span>
-          <span class="command-shortcut">1</span>
-        </div>
         <div class="command-item" data-action="work/bench-sales.html">
           <span class="command-item-left">Bench Sales Platform</span>
+          <span class="command-shortcut">1</span>
+        </div>
+        <div class="command-item" data-action="work/namma-yatri.html">
+          <span class="command-item-left">Namma Yatri</span>
           <span class="command-shortcut">2</span>
+        </div>
+        <div class="command-item" data-action="work/job-pulse.html">
+          <span class="command-item-left">Job Pulse Alert Dashboard</span>
+          <span class="command-shortcut">3</span>
+        </div>
+        <div class="command-item" data-action="work/gymogram.html">
+          <span class="command-item-left">Gymogram Social Fitness</span>
+          <span class="command-shortcut">4</span>
+        </div>
+        <div class="command-item" data-action="work/laundry-app.html">
+          <span class="command-item-left">Laundry App</span>
+          <span class="command-shortcut">5</span>
         </div>
         <div class="command-item" data-action="work/lead-generator.html">
           <span class="command-item-left">Lead Generator</span>
-          <span class="command-shortcut">3</span>
-        </div>
-        <div class="command-item" data-action="work/laundry-app.html">
-          <span class="command-item-left"> Laundry App</span>
-          <span class="command-shortcut">4</span>
+          <span class="command-shortcut">6</span>
         </div>
       </div>
     </div>
@@ -389,8 +386,7 @@
   <nav class="nav" id="navbar">
     <div class="nav-inner">
       <div class="nav-logo" onclick="window.location.href='index.html'">
-    
-        <span class="logo-text">Sagar Shivaji</span>
+        <span class="logo-text">SAGAR</span>
       </div>
       <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -402,208 +398,192 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="work.html">Work</a>
-        <a href="about.html">About</a>
+        <a href="about.html" class="active">About</a>
         <a href="research.html">Research</a>
-        <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank">Resume ↗</a>
-        <div class="nav-divider"></div>
-        <div class="theme-toggle" id="themeToggle" title="Toggle theme">
-          <button class="theme-toggle-btn" data-theme="light" aria-label="Light mode">☀</button>
-          <button class="theme-toggle-btn active" data-theme="dark" aria-label="Dark mode">☾</button>
-        </div>
+        <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank" class="nav-resume-pill">Resume ↗</a>
         <span class="command-badge" onclick="openCommand()" title="Open Command Palette (⌘K)">⌘K</span>
       </div>
     </div>
   </nav>
 
-  <!-- ABOUT CONTENT -->
+  <!-- ABOUT CONTENT WITH STICKY SIDEBAR -->
   <div class="page" id="page-about">
     <main class="container">
-      <section class="page-section">
-        <div class="reading-width">
-          <h1 class="heading-1 reveal" style="margin-bottom:40px;">About</h1>
-          <div class="portrait-container reveal" style="width:250px; height: 300px; margin-bottom:48px; ">
-            <div class="portrait-glow"></div>
-            <div class="portrait" style="width:90%; height: 100%; border-radius: 24px; overflow:hidden;">
-              <img src="images/my image.jpg" alt="Sagar portrait">
-            </div>
-          </div>
-          <p class="body-large reveal text-primary" style="margin-bottom:32px; font-weight:500;">I am Sagar Shivaji, an AI Product Designer based in Hyderabad, India. I specialize in complex B2B platforms, design systems, and workflow automation.</p>
-          <p class="body-base reveal text-secondary" style="margin-bottom:24px;">With a background in Computer Science specializing in Artificial Intelligence, I bridge the gap between design and technology. I enjoy designing AI-powered products, building scalable design systems, and creating workflows that make enterprise software more efficient, accessible, and easier to use.</p>
-          
-          <div class="divider reveal"></div>
-          
-          <h2 class="heading-3 reveal font-semibold" style="margin-bottom:24px;">Core Capabilities</h2>
-          <div class="reveal capabilities-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:48px;">
-            <div class="capability-item"><span class="bullet">✦</span> Product Strategy</div>
-            <div class="capability-item"><span class="bullet">✦</span> User Experience & Research</div>
-            <div class="capability-item"><span class="bullet">✦</span> Complex Design Systems</div>
-            <div class="capability-item"><span class="bullet">✦</span> Web Accessibility (WCAG 2.2)</div>
-            <div class="capability-item"><span class="bullet">✦</span> Interactive Prototyping</div>
-            <div class="capability-item"><span class="bullet">✦</span> LLM & AI workflow mapping</div>
-            <div class="capability-item"><span class="bullet">✦</span> Information Architecture</div>
-          </div>
-          <!-- ═══════════════════════════════════════
-     DESIGN PROFILE – RADAR CHART SECTION
-     ═══════════════════════════════════════ -->
-<section class="design-profile-section reveal" id="designProfileSection">
-  <div class="design-profile-inner">
-    <span class="design-profile-label">Design Profile</span>
-    <h2 class="design-profile-title">Design Profile</h2>
-    <p class="design-profile-subtitle">
-      A visual overview of my core product design capabilities developed through real-world projects.
-    </p>
+      <div class="project-layout about-layout" style="margin-top: 40px;">
+        <!-- Sticky Sidebar Navigation for About Page -->
+        <nav class="sticky-nav" id="stickyNav">
+          <div class="sticky-nav-header">About Me</div>
+          <a href="#bio" class="active">Biography</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#designProfileSection">Design Profile</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#sketchbook">Sketchbook</a>
+        </nav>
 
-    <div class="radar-chart-wrapper">
-      <div class="radar-chart-container" id="radarChartContainer">
-        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" id="radarSvg">
-          <defs>
-            <filter id="radarGlow" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="2.5" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-            <filter id="dotGlow" x="-60%" y="-60%" width="220%" height="220%">
-              <feGaussianBlur stdDeviation="1.8" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-          <!-- Grid polygons (generated by JS) -->
-          <g id="gridGroup"></g>
-          <!-- Axis lines (generated by JS) -->
-          <g id="axisGroup"></g>
-          <!-- Data polygon -->
-          <polygon
-            id="dataPolygon"
-            class="radar-data-polygon"
-            points=""
-            style="transform: scale(0); transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);"
-          />
-          <!-- Data dots (generated by JS) -->
-          <g id="dataDotsGroup"></g>
-          <!-- Hit areas (generated by JS) -->
-          <g id="hitAreasGroup"></g>
-          <!-- Labels (generated by JS) -->
-          <g id="labelsGroup"></g>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Tooltip (positioned fixed, outside the chart) -->
-<div class="radar-tooltip" id="radarTooltip">
-  <div class="radar-tooltip-arrow" id="radarTooltipArrow"></div>
-  <div class="radar-tooltip-skill-name" id="tooltipSkillName"></div>
-  <div class="radar-tooltip-score" id="tooltipScore"></div>
-  <div class="radar-tooltip-desc" id="tooltipDesc"></div>
-  <ul class="radar-tooltip-achievements" id="tooltipAchievements"></ul>
-</div>
-          
-          <div class="divider reveal"></div>
-          
-          <h2 class="heading-3 reveal font-semibold" style="margin-bottom:24px;">Professional History</h2>
-          <div class="timeline-item reveal" style="margin-bottom:32px;">
-            <div class="timeline-header">
-              <h4 class="font-semibold text-primary">AI Product Designer · Vensiti Inc.</h4>
-              <span class="timeline-date small font-semibold">Mar 2026 – Present</span>
+        <!-- Main Content Sections -->
+        <div class="project-content-block">
+          <!-- 1. Biography -->
+          <div id="bio" class="project-content-section reveal">
+            <h1 class="case-section-title" style="margin-bottom:28px;">About Me</h1>
+            <div class="portrait-container reveal" style="width:260px; height: 320px; margin-bottom:32px;">
+              <div class="portrait" style="width:100%; height: 100%; overflow:hidden;">
+                <img src="images/my image.jpg" alt="Sagar portrait" style="width:100%; height:100%; object-fit:cover;">
+              </div>
             </div>
-            <p class="small text-secondary" style="margin-top: 4px;">Designing enterprise SaaS products focused on staffing and recruitment. Leading the design of AI-powered platforms including Bench Sales, Lead Generator, Job Pipeline, and Resume Formatter while collaborating closely with product managers, developers, and business stakeholders.</p>
-          </div>
-          <div class="timeline-item reveal" style="margin-bottom:32px;">
-            <div class="timeline-header">
-              <h4 class="font-semibold text-primary">AI Product Design Intern · Techgene Solutions</h4>
-              <span class="timeline-date small font-semibold">Dec 2025 – Feb 2026</span>
-            </div>
-            <p class="small text-secondary" style="margin-top: 4px;">Designed internal enterprise applications and workflow automation tools, contributing to user research, wireframing, high-fidelity interfaces, design systems, and interactive prototypes for AI-driven products.</p>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-header">
-              <h4 class="font-semibold text-primary">UX Design Intern · Brain Quest</h4>
-              <span class="timeline-date small font-semibold">May 2025 – Jun 2025</span>
-            </div>
-            <p class="small text-secondary" style="margin-top: 4px;">Designed responsive user interfaces with a strong focus on usability and accessibility. Collaborated with the design team to create wireframes, iterate on high-fidelity designs, and improve user experiences through feedback and design reviews.</p>
+            <p class="body-large text-primary" style="margin-bottom:20px; font-weight:500;">I am Sagar Shivaji, an AI Product Designer based in Hyderabad, India. I specialize in complex B2B platforms, design systems, and workflow automation.</p>
+            <p class="body-base text-secondary" style="margin-bottom:24px;">With a background in Computer Science specializing in Artificial Intelligence, I bridge the gap between design and technology. I enjoy designing AI-powered products, building scalable design systems, and creating workflows that make enterprise software more efficient, accessible, and easier to use.</p>
           </div>
 
-          <h2 class="heading-3 reveal font-semibold" style="margin-bottom:24px; margin-top: 40px;">Education</h2>
-          <div class="timeline-item reveal">
-            <div class="timeline-header">
-              <h4 class="font-semibold text-primary">B.Tech — Computer Science (Artificial Intelligence & Machine Learning)</h4>
-              <span class="timeline-date small font-semibold">Nov 2021 – Aug 2025</span>
+          <!-- 2. Core Capabilities -->
+          <div id="capabilities" class="project-content-section reveal">
+            <h2 class="case-section-title">Core Capabilities</h2>
+            <div class="capabilities-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin-top:20px;">
+              <div class="capability-item" style="background:#09090d; border:1px solid rgba(255,255,255,0.14); padding:16px;"><span class="bullet" style="color:#facc15;">✦</span> Product Strategy</div>
+              <div class="capability-item" style="background:#09090d; border:1px solid rgba(255,255,255,0.14); padding:16px;"><span class="bullet" style="color:#facc15;">✦</span> User Experience & Research</div>
+              <div class="capability-item" style="background:#09090d; border:1px solid rgba(255,255,255,0.14); padding:16px;"><span class="bullet" style="color:#facc15;">✦</span> Complex Design Systems</div>
+              <div class="capability-item" style="background:#09090d; border:1px solid rgba(255,255,255,0.14); padding:16px;"><span class="bullet" style="color:#facc15;">✦</span> Web Accessibility (WCAG 2.2)</div>
+              <div class="capability-item" style="background:#09090d; border:1px solid rgba(255,255,255,0.14); padding:16px;"><span class="bullet" style="color:#facc15;">✦</span> Interactive Prototyping</div>
+              <div class="capability-item" style="background:#09090d; border:1px solid rgba(255,255,255,0.14); padding:16px;"><span class="bullet" style="color:#facc15;">✦</span> LLM & AI Workflow Mapping</div>
+              <div class="capability-item" style="background:#09090d; border:1px solid rgba(255,255,255,0.14); padding:16px;"><span class="bullet" style="color:#facc15;">✦</span> Information Architecture</div>
             </div>
-            <p class="small text-secondary" style="margin-top: 4px;">Specialized in Artificial Intelligence and Machine Learning while building projects in AI, computer vision, and product design. Developed a strong foundation in human-centered design, frontend development, and AI-powered digital experiences.</p>
+          </div>
+
+          <!-- 3. Design Profile (Radar Chart) -->
+          <div id="designProfileSection" class="project-content-section design-profile-section reveal">
+            <h2 class="case-section-title">Design Profile</h2>
+            <p class="body-base text-secondary" style="margin-bottom:32px;">
+              A visual overview of my core product design capabilities developed through real-world projects.
+            </p>
+
+            <div class="radar-chart-wrapper">
+              <div class="radar-chart-container" id="radarChartContainer">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" id="radarSvg">
+                  <defs>
+                    <filter id="radarGlow" x="-30%" y="-30%" width="160%" height="160%">
+                      <feGaussianBlur stdDeviation="2.5" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                    <filter id="dotGlow" x="-60%" y="-60%" width="220%" height="220%">
+                      <feGaussianBlur stdDeviation="1.8" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <g id="gridGroup"></g>
+                  <g id="axisGroup"></g>
+                  <polygon
+                    id="dataPolygon"
+                    class="radar-data-polygon"
+                    points=""
+                    style="transform: scale(0); transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);"
+                  />
+                  <g id="dataDotsGroup"></g>
+                  <g id="hitAreasGroup"></g>
+                  <g id="labelsGroup"></g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tooltip -->
+          <div class="radar-tooltip" id="radarTooltip">
+            <div class="radar-tooltip-arrow" id="radarTooltipArrow"></div>
+            <div class="radar-tooltip-skill-name" id="tooltipSkillName"></div>
+            <div class="radar-tooltip-score" id="tooltipScore"></div>
+            <div class="radar-tooltip-desc" id="tooltipDesc"></div>
+            <ul class="radar-tooltip-achievements" id="tooltipAchievements"></ul>
+          </div>
+
+          <!-- 4. Professional History -->
+          <div id="experience" class="project-content-section reveal">
+            <h2 class="case-section-title">Professional History</h2>
+            <div class="timeline-item" style="background:#09090d; border:1px solid rgba(255,255,255,0.12); padding:24px; margin-bottom:20px;">
+              <div class="timeline-header">
+                <h4 class="font-semibold text-primary" style="font-size:17px; margin-bottom:4px;">AI Product Designer · Vensiti Inc.</h4>
+                <span class="timeline-date small font-semibold" style="color:#facc15;">Mar 2026 – Present</span>
+              </div>
+              <p class="small text-secondary" style="margin-top: 8px; line-height:1.6;">Designing enterprise SaaS products focused on staffing and recruitment. Leading the design of AI-powered platforms including Bench Sales, Lead Generator, Job Pipeline, and Resume Formatter while collaborating closely with product managers, developers, and business stakeholders.</p>
+            </div>
+            <div class="timeline-item" style="background:#09090d; border:1px solid rgba(255,255,255,0.12); padding:24px; margin-bottom:20px;">
+              <div class="timeline-header">
+                <h4 class="font-semibold text-primary" style="font-size:17px; margin-bottom:4px;">AI Product Design Intern · Techgene Solutions</h4>
+                <span class="timeline-date small font-semibold" style="color:#facc15;">Dec 2025 – Feb 2026</span>
+              </div>
+              <p class="small text-secondary" style="margin-top: 8px; line-height:1.6;">Designed internal enterprise applications and workflow automation tools, contributing to user research, wireframing, high-fidelity interfaces, design systems, and interactive prototypes for AI-driven products.</p>
+            </div>
+            <div class="timeline-item" style="background:#09090d; border:1px solid rgba(255,255,255,0.12); padding:24px;">
+              <div class="timeline-header">
+                <h4 class="font-semibold text-primary" style="font-size:17px; margin-bottom:4px;">UX Design Intern · Brain Quest</h4>
+                <span class="timeline-date small font-semibold" style="color:#facc15;">May 2025 – Jun 2025</span>
+              </div>
+              <p class="small text-secondary" style="margin-top: 8px; line-height:1.6;">Designed responsive user interfaces with a strong focus on usability and accessibility. Collaborated with the design team to create wireframes, iterate on high-fidelity designs, and improve user experiences through feedback and design reviews.</p>
+            </div>
+          </div>
+
+          <!-- 5. Education -->
+          <div id="education" class="project-content-section reveal">
+            <h2 class="case-section-title">Education</h2>
+            <div class="timeline-item" style="background:#09090d; border:1px solid rgba(255,255,255,0.12); padding:24px;">
+              <div class="timeline-header">
+                <h4 class="font-semibold text-primary" style="font-size:17px; margin-bottom:4px;">B.Tech — Computer Science (Artificial Intelligence & Machine Learning)</h4>
+                <span class="timeline-date small font-semibold" style="color:#facc15;">Nov 2021 – Aug 2025</span>
+              </div>
+              <p class="small text-secondary" style="margin-top: 8px; line-height:1.6;">Specialized in Artificial Intelligence and Machine Learning while building projects in AI, computer vision, and product design. Developed a strong foundation in human-centered design, frontend development, and AI-powered digital experiences.</p>
+            </div>
+          </div>
+
+          <!-- 6. Sketchbook -->
+          <div id="sketchbook" class="project-content-section sketchbook-section reveal" style="margin:0; max-width:100%; padding:0;">
+            <h2 class="case-section-title">Beyond The Screen</h2>
+            <div class="sketchbook-header" style="margin-bottom:28px;">
+              <p class="body-large text-primary" style="margin-bottom:12px; font-weight:600;">Drawing taught me to observe.</p>
+              <p class="body-base text-secondary" style="margin-bottom:12px;">Before I started designing digital products, drawing was one of the ways I explored ideas and understood the world around me.</p>
+              <p class="body-base text-secondary">I enjoy sketching portraits, objects, and things that catch my attention. It trained me to notice proportions, composition, and visual relationships that influence the way I approach product design today.</p>
+            </div>
+
+            <div class="sketch-grid">
+              <figure class="sketch sketch-featured">
+                <img src="Sketches/Buddha.jpeg" alt="Portrait drawing by Sagar Shivaji">
+                <figcaption>Buddha</figcaption>
+              </figure>
+              <figure class="sketch">
+                <img src="Sketches/love.jpeg" alt="Observational sketch by Sagar Shivaji">
+                <figcaption>Love</figcaption>
+              </figure>
+              <figure class="sketch">
+                <img src="Sketches/toy.jpeg" alt="Concept sketch by Sagar Shivaji">
+                <figcaption>Exploration</figcaption>
+              </figure>
+              <figure class="sketch">
+                <img src="Sketches/bird.jpeg" alt="Sketchbook drawing by Sagar Shivaji">
+                <figcaption>Bird</figcaption>
+              </figure>
+              <figure class="sketch">
+                <img src="Sketches/Hand.jpeg" alt="Detailed pencil artwork by Sagar Shivaji">
+                <figcaption>Hand</figcaption>
+              </figure>
+              <figure class="sketch">
+                <img src="Sketches/loki.jpeg" alt="Detailed pencil artwork by Sagar Shivaji">
+                <figcaption>Loki</figcaption>
+              </figure>
+              <figure class="sketch">
+                <img src="Sketches/zoro.jpeg" alt="Detailed pencil artwork by Sagar Shivaji">
+                <figcaption>Zoro</figcaption>
+              </figure>
+              <figure class="sketch">
+                <img src="Sketches/venom.jpeg" alt="Detailed pencil artwork by Sagar Shivaji">
+                <figcaption>Venom</figcaption>
+              </figure>
+            </div>
           </div>
         </div>
-      </section>
-      <section class="sketchbook-section" >
-       <div class="sketchbook-header">
-    <span class="section-label">BEYOND THE SCREEN</span>
-
-    <h2>Drawing taught me to observe.</h2>
-
-    <p>
-      Before I started designing digital products, drawing was one of the ways I explored ideas and understood the world around me.
-    </p>
-
-    <p>
-      I enjoy sketching portraits, objects, and things that catch my attention. It has trained me to notice proportions, details,
-      composition, and small visual relationships ,skills that naturally influence the way I approach product design today.
-    </p>
-  </div>
-
-  <div class="sketch-grid">
-
-    <!-- Featured drawing -->
-    <figure class="sketch sketch-featured">
-      <img src="Sketches/Buddha.jpeg" alt="Portrait drawing by Sagar Shivaji">
-      <figcaption>Buddha</figcaption>
-    </figure>
-
-    <figure class="sketch">
-      <img src="Sketches/love.jpeg" alt="Observational sketch by Sagar Shivaji">
-      <figcaption>Love</figcaption>
-    </figure>
-
-    <figure class="sketch">
-      <img src="Sketches/toy.jpeg" alt="Concept sketch by Sagar Shivaji">
-      <figcaption>Exploration</figcaption>
-    </figure>
-
-    <figure class="sketch">
-      <img src="Sketches/bird.jpeg" alt="Sketchbook drawing by Sagar Shivaji">
-      <figcaption>Bird</figcaption>
-    </figure>
-
-    <figure class="sketch">
-      <img src="Sketches/Hand.jpeg" alt="Detailed pencil artwork by Sagar Shivaji">
-      <figcaption>Hand</figcaption>
-    </figure>
-    <figure class="sketch">
-      <img src="Sketches/loki.jpeg" alt="Detailed pencil artwork by Sagar Shivaji">
-      <figcaption>Loki</figcaption>
-    </figure>
-    <figure class="sketch">
-      <img src="Sketches/zoro.jpeg" alt="Detailed pencil artwork by Sagar Shivaji">
-      <figcaption>Zoro</figcaption>
-    </figure>
-    <figure class="sketch">
-      <img src="Sketches/venom.jpeg" alt="Detailed pencil artwork by Sagar Shivaji">
-      <figcaption>Venom</figcaption>
-    </figure>
-
-  </div>
-
-  <div class="sketchbook-footer">
-    <p>
-      For me, drawing isn't about creating something perfect.
-      It's about slowing down enough to notice what others might miss.
-    </p>
-  </div>
-</section>
+      </div>
     </main>
     <!-- ══ PREMIUM FOOTER ══ -->
     <footer class="footer-pro">
@@ -617,7 +597,7 @@
           </div>
           <div class="footer-cta-actions">
             <a href="mailto:sagarshivaji89@gmail.com" class="btn btn-primary btn-large">Say Hello ↗</a>
-            <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank" class="btn btn-outline btn-large" style="background-color: #FD203D; color: #ffffff;">View Resume</a>
+            <a href="https://drive.google.com/file/d/1GSdCrdNhtTW1OOrWKYBNJSG5JsdlyeKb/view?usp=sharing" target="_blank" class="btn btn-secondary btn-large">View Resume</a>
           </div>
         </div>
 
@@ -626,7 +606,7 @@
         <!-- Grid: brand + nav cols -->
         <div class="footer-main-grid">
           <div class="footer-brand-col">
-            <div class="footer-logo-pro">Sagar Shivaji</div>
+            <div class="footer-logo-pro">SAGAR</div>
             <p class="footer-bio">AI Product Designer specialising in B2B SaaS, enterprise workflows, and human-centred systems.</p>
             <div class="footer-status-pill">
               <span class="status-dot"></span>
