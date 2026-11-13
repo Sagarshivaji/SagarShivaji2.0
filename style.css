@@ -1754,7 +1754,7 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 .work-tab {
   position: relative;
   padding: 10px 24px;
-   : 100px;
+   
   border: none;
   background: transparent;
   color: var(--work-tab-text);
@@ -1773,8 +1773,8 @@ html[data-theme="dark"] .nav-links a:not(.nav-resume-pill).active:hover {
 }
 
 .work-tab.active {
-  background: var(--accent-contrast);
-  color: var(--accent);
+  background: #ffffff;
+  color: #000000;
   box-shadow: none;
 }
 
