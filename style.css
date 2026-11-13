@@ -185,13 +185,13 @@ body.theme-benchsales,
 body.theme-nammayatri,
 [data-project="namma-yatri"] body {
   --bg-primary: #005F3F !important;
-  --bg-secondary: #00462e !important;
+  --bg-secondary: #022418 !important;
   --bg-surface: #021a12 !important;
   --bg-subtle: #032b1e !important;
   --card-bg: #02150e !important;
   --nav-bg: rgba(0, 50, 33, 0.92) !important;
   --nav-bg-scrolled: rgba(0, 36, 24, 0.97) !important;
-  --accent-purple: #34d399 !important;
+  --accent-purple: #085b3d !important;
   --text-secondary: #d1fae5 !important;
   --text-tertiary: #a7f3d0 !important;
 }
@@ -200,23 +200,23 @@ body.theme-nammayatri,
 [data-project="job-pulse"],
 body.theme-jobpulse,
 [data-project="job-pulse"] body {
-  --bg-primary: #4a0e18 !important;
+  --bg-primary: #0a62ce !important;
   --bg-secondary: #350810 !important;
-  --bg-surface: #120306 !important;
-  --bg-subtle: #2b080e !important;
-  --card-bg: #140407 !important;
-  --nav-bg: rgba(43, 8, 14, 0.92) !important;
+  --bg-surface: #063bf9 !important;
+  --bg-subtle: #080f2b !important;
+  --card-bg: #040b14 !important;
+  --nav-bg: rgba(8, 16, 43, 0.92) !important;
   --nav-bg-scrolled: rgba(26, 4, 8, 0.97) !important;
-  --accent-purple: #f87171 !important;
+  --accent-purple: #7195f8 !important;
   --text-secondary: #fecaca !important;
-  --text-tertiary: #fca5a5 !important;
+  --text-tertiary: #a5ccfc !important;
 }
 
 /* 4. Gymogram: Signature Sunset Ember Rust (#541e0d) */
 [data-project="gymogram"],
 body.theme-gymogram,
 [data-project="gymogram"] body {
-  --bg-primary: #541e0d !important;
+  --bg-primary: #15120f !important;
   --bg-secondary: #3d1407 !important;
   --bg-surface: #140602 !important;
   --bg-subtle: #2f0f06 !important;
@@ -232,10 +232,10 @@ body.theme-gymogram,
 [data-project="laundry"],
 body.theme-laundry,
 [data-project="laundry"] body {
-  --bg-primary: #12295C !important;
+  --bg-primary: #005988 !important;
   --bg-secondary: #0a1b40 !important;
   --bg-surface: #040c20 !important;
-  --bg-subtle: #1a387a !important;
+  --bg-subtle: #020d24 !important;
   --card-bg: #050e24 !important;
   --nav-bg: rgba(10, 27, 64, 0.92) !important;
   --nav-bg-scrolled: rgba(5, 14, 36, 0.97) !important;
@@ -248,10 +248,10 @@ body.theme-laundry,
 [data-project="lead-generator"],
 body.theme-leadgenerator,
 [data-project="lead-generator"] body {
-  --bg-primary: #0b333e !important;
+  --bg-primary: #062a56 !important;
   --bg-secondary: #07242c !important;
   --bg-surface: #020e12 !important;
-  --bg-subtle: #104351 !important;
+  --bg-subtle: #000000 !important;
   --card-bg: #031116 !important;
   --nav-bg: rgba(8, 38, 46, 0.92) !important;
   --nav-bg-scrolled: rgba(4, 20, 24, 0.97) !important;
@@ -264,14 +264,14 @@ body.theme-leadgenerator,
 [data-project="design-system"],
 body.theme-designsystem,
 [data-project="design-system"] body {
-  --bg-primary: #1e1b4b !important;
+  --bg-primary: #4a0355 !important;
   --bg-secondary: #131034 !important;
   --bg-surface: #070617 !important;
-  --bg-subtle: #292464 !important;
+  --bg-subtle: #050314 !important;
   --card-bg: #08071a !important;
   --nav-bg: rgba(19, 16, 52, 0.92) !important;
   --nav-bg-scrolled: rgba(10, 8, 30, 0.97) !important;
-  --accent-purple: #c084fc !important;
+  --accent-purple: #3b1f57 !important;
   --text-secondary: #e0e7ff !important;
   --text-tertiary: #c7d2fe !important;
 }
